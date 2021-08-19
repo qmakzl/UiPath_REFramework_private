@@ -1,0 +1,555 @@
+<PROJECT START>
+2020-06-22 09:28:51----------Process Kill
+2020-06-22 09:28:51----------Init Start
+2020-06-22 09:28:51----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:28:51----------Data 1 : GET TransactionData Start
+<PROJECT START>
+2020-06-22 09:30:06----------Process Kill
+2020-06-22 09:30:06----------Init Start
+2020-06-22 09:30:06----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:30:06----------Data 1 : GET TransactionData Start
+2020-06-22 09:30:07----------Data 1 : GET TransactionData End
+2020-06-22 09:30:07----------Data 1 : Process Start
+2020-06-22 09:30:08----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:30:08----------Data 2 : GET TransactionData Start
+2020-06-22 09:30:08----------Data 2 : GET TransactionData End
+2020-06-22 09:30:08----------Data 2 : Process Start
+2020-06-22 09:30:08----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:30:08----------Data 3 : GET TransactionData Start
+2020-06-22 09:30:08----------Data 3 : GET TransactionData End
+2020-06-22 09:30:08----------Data 3 : Process Start
+2020-06-22 09:30:08----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:30:08----------Data 4 : GET TransactionData Start
+2020-06-22 09:30:08----------Data 4 : GET TransactionData End
+2020-06-22 09:30:08----------Data 4 : Process Start
+2020-06-22 09:30:09----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:30:09----------Data 5 : GET TransactionData Start
+2020-06-22 09:30:09----------Data 5 : GET TransactionData End
+2020-06-22 09:30:09----------Data 5 : Process Start
+2020-06-22 09:30:09----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:30:09----------Data 6 : GET TransactionData Start
+2020-06-22 09:30:09----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 09:30:09----------Process Close
+<PROJECT End>
+<PROJECT START>
+2020-06-22 09:35:32----------Process Kill
+2020-06-22 09:35:32----------Init Start
+2020-06-22 09:35:33----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:35:33----------Data 1 : GET TransactionData Start
+2020-06-22 09:35:34----------Data 1 : GET TransactionData End
+2020-06-22 09:35:34----------Data 1 : Process Start
+2020-06-22 09:35:34----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:35:34----------Data 2 : GET TransactionData Start
+2020-06-22 09:35:34----------Data 2 : GET TransactionData End
+2020-06-22 09:35:35----------Data 2 : Process Start
+2020-06-22 09:35:35----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:35:35----------Data 3 : GET TransactionData Start
+2020-06-22 09:35:35----------Data 3 : GET TransactionData End
+2020-06-22 09:35:35----------Data 3 : Process Start
+2020-06-22 09:35:35----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:35:35----------Data 4 : GET TransactionData Start
+2020-06-22 09:35:35----------Data 4 : GET TransactionData End
+2020-06-22 09:35:35----------Data 4 : Process Start
+2020-06-22 09:35:35----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:35:35----------Data 5 : GET TransactionData Start
+2020-06-22 09:35:35----------Data 5 : GET TransactionData End
+2020-06-22 09:35:35----------Data 5 : Process Start
+2020-06-22 09:35:36----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:35:36----------Data 6 : GET TransactionData Start
+2020-06-22 09:35:36----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 09:35:41----------No Data Flow Fail(Exception) ----------
+<PROJECT START>
+2020-06-22 09:38:18----------Process Kill
+2020-06-22 09:38:18----------Init Start
+2020-06-22 09:38:19----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:38:19----------Data 1 : GET TransactionData Start
+2020-06-22 09:38:20----------Data 1 : GET TransactionData End
+2020-06-22 09:38:20----------Data 1 : Process Start
+2020-06-22 09:38:20----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:38:20----------Data 2 : GET TransactionData Start
+2020-06-22 09:38:20----------Data 2 : GET TransactionData End
+2020-06-22 09:38:20----------Data 2 : Process Start
+2020-06-22 09:38:20----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:38:20----------Data 3 : GET TransactionData Start
+2020-06-22 09:38:20----------Data 3 : GET TransactionData End
+2020-06-22 09:38:20----------Data 3 : Process Start
+2020-06-22 09:38:20----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:38:20----------Data 4 : GET TransactionData Start
+2020-06-22 09:38:20----------Data 4 : GET TransactionData End
+2020-06-22 09:38:20----------Data 4 : Process Start
+2020-06-22 09:38:20----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:38:20----------Data 5 : GET TransactionData Start
+2020-06-22 09:38:20----------Data 5 : GET TransactionData End
+2020-06-22 09:38:20----------Data 5 : Process Start
+2020-06-22 09:38:20----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:38:20----------Data 6 : GET TransactionData Start
+2020-06-22 09:38:20----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 09:38:20----------No Data Flow Fail(Exception) ----------
+2020-06-22 09:38:20----------No data Flow ErrorMessage : ERROR 발생 | ErrorSource : System.Activities
+2020-06-22 09:38:21----------Process Close Error
+2020-06-22 09:38:21----------ScreenshotFilePath : Exceptions_Screenshots\ExceptionScreenshot_200622.093821.png
+2020-06-22 09:38:21----------Process Kill
+<PROJECT START>
+2020-06-22 09:45:22----------Process Kill
+2020-06-22 09:45:22----------Init Start
+2020-06-22 09:45:23----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:45:23----------Data 1 : GET TransactionData Start
+2020-06-22 09:45:24----------Data 1 : GET TransactionData End
+2020-06-22 09:45:24----------Data 1 : Process Start
+2020-06-22 09:45:24----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:45:24----------Data 2 : GET TransactionData Start
+2020-06-22 09:45:24----------Data 2 : GET TransactionData End
+2020-06-22 09:45:24----------Data 2 : Process Start
+2020-06-22 09:45:24----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:45:24----------Data 3 : GET TransactionData Start
+2020-06-22 09:45:24----------Data 3 : GET TransactionData End
+2020-06-22 09:45:24----------Data 3 : Process Start
+2020-06-22 09:45:24----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:45:24----------Data 4 : GET TransactionData Start
+2020-06-22 09:45:24----------Data 4 : GET TransactionData End
+2020-06-22 09:45:24----------Data 4 : Process Start
+2020-06-22 09:45:24----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:45:24----------Data 5 : GET TransactionData Start
+2020-06-22 09:45:24----------Data 5 : GET TransactionData End
+2020-06-22 09:45:24----------Data 5 : Process Start
+2020-06-22 09:45:24----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:45:24----------Data 6 : GET TransactionData Start
+2020-06-22 09:45:24----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 09:45:27----------No Data Flow Fail(Exception) ----------
+2020-06-22 09:45:27----------No data Flow ErrorMessage : Cannot find the UI element corresponding to this selector: <wnd app='notepad.exe' cls='Notepad' title='2020-06-22 - 메모장' /><wnd aaname='가로' cls='Edit' /><ctrl name='텍스트 편집' role='editable text' /> | ErrorSource : UiPath.UiAutomation.Activities
+2020-06-22 09:45:28----------Process Close Error
+2020-06-22 09:45:28----------ScreenshotFilePath : Exceptions_Screenshots\ExceptionScreenshot_200622.094528.png
+2020-06-22 09:45:28----------Process Kill
+<PROJECT START>
+2020-06-22 09:55:11----------Process Kill
+2020-06-22 09:55:11----------Init Start
+2020-06-22 09:55:12----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:55:12----------Data 1 : GET TransactionData Start
+2020-06-22 09:55:13----------Data 1 : GET TransactionData End
+2020-06-22 09:55:13----------Data 1 : Process Start
+2020-06-22 09:55:13----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:55:13----------Data 2 : GET TransactionData Start
+2020-06-22 09:55:13----------Data 2 : GET TransactionData End
+2020-06-22 09:55:13----------Data 2 : Process Start
+2020-06-22 09:55:14----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:55:14----------Data 3 : GET TransactionData Start
+2020-06-22 09:55:14----------Data 3 : GET TransactionData End
+2020-06-22 09:55:14----------Data 3 : Process Start
+2020-06-22 09:55:14----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:55:14----------Data 4 : GET TransactionData Start
+2020-06-22 09:55:14----------Data 4 : GET TransactionData End
+2020-06-22 09:55:14----------Data 4 : Process Start
+2020-06-22 09:55:14----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:55:14----------Data 5 : GET TransactionData Start
+2020-06-22 09:55:15----------Data 5 : GET TransactionData End
+2020-06-22 09:55:15----------Data 5 : Process Start
+2020-06-22 09:55:15----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:55:15----------Data 6 : GET TransactionData Start
+2020-06-22 09:55:15----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 09:55:16----------Process Close
+<PROJECT End>
+<PROJECT START>
+2020-06-22 09:55:25----------Process Kill
+2020-06-22 09:55:25----------Init Start
+2020-06-22 09:55:25----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:55:25----------Data 1 : GET TransactionData Start
+2020-06-22 09:55:26----------Data 1 : GET TransactionData End
+2020-06-22 09:55:26----------Data 1 : Process Start
+2020-06-22 09:55:26----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:55:27----------Data 2 : GET TransactionData Start
+2020-06-22 09:55:27----------Data 2 : GET TransactionData End
+2020-06-22 09:55:27----------Data 2 : Process Start
+2020-06-22 09:55:27----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:55:27----------Data 3 : GET TransactionData Start
+2020-06-22 09:55:27----------Data 3 : GET TransactionData End
+2020-06-22 09:55:27----------Data 3 : Process Start
+2020-06-22 09:55:27----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:55:27----------Data 4 : GET TransactionData Start
+2020-06-22 09:55:27----------Data 4 : GET TransactionData End
+2020-06-22 09:55:27----------Data 4 : Process Start
+2020-06-22 09:55:27----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:55:27----------Data 5 : GET TransactionData Start
+2020-06-22 09:55:27----------Data 5 : GET TransactionData End
+2020-06-22 09:55:27----------Data 5 : Process Start
+2020-06-22 09:55:27----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:55:27----------Data 6 : GET TransactionData Start
+2020-06-22 09:55:27----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 09:55:30----------No Data Flow Fail(Exception) ----------
+2020-06-22 09:55:30----------No data Flow ErrorMessage : Cannot find the UI element corresponding to this selector: <wnd app='notepad.exe' cls='Notepad' title='2020-06-22 - 메모장' /><wnd aaname='가로' cls='Edit' /><ctrl name='텍스트 편집' role='editable text' /> | ErrorSource : UiPath.UiAutomation.Activities
+2020-06-22 09:55:30----------Process Close Error
+2020-06-22 09:55:30----------ScreenshotFilePath : Exceptions_Screenshots\ExceptionScreenshot_200622.095530.png
+2020-06-22 09:55:30----------Process Kill
+<PROJECT START>
+2020-06-22 09:58:36----------Process Kill
+2020-06-22 09:58:36----------Init Start
+2020-06-22 09:58:36----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:58:36----------Data 1 : GET TransactionData Start
+2020-06-22 09:58:37----------Data 1 : GET TransactionData End
+2020-06-22 09:58:37----------Data 1 : Process Start
+2020-06-22 09:58:37----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:58:37----------Data 2 : GET TransactionData Start
+2020-06-22 09:58:38----------Data 2 : GET TransactionData End
+2020-06-22 09:58:38----------Data 2 : Process Start
+2020-06-22 09:58:38----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:58:38----------Data 3 : GET TransactionData Start
+2020-06-22 09:58:38----------Data 3 : GET TransactionData End
+2020-06-22 09:58:38----------Data 3 : Process Start
+2020-06-22 09:58:38----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:58:38----------Data 4 : GET TransactionData Start
+2020-06-22 09:58:38----------Data 4 : GET TransactionData End
+2020-06-22 09:58:38----------Data 4 : Process Start
+2020-06-22 09:58:39----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:58:39----------Data 5 : GET TransactionData Start
+2020-06-22 09:58:39----------Data 5 : GET TransactionData End
+2020-06-22 09:58:39----------Data 5 : Process Start
+2020-06-22 09:58:39----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:58:39----------Data 6 : GET TransactionData Start
+2020-06-22 09:58:39----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 09:58:40----------Process Close
+<PROJECT End>
+<PROJECT START>
+2020-06-22 09:58:51----------Process Kill
+2020-06-22 09:58:52----------Init Start
+2020-06-22 09:58:52----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:58:52----------Data 1 : GET TransactionData Start
+2020-06-22 09:58:53----------Data 1 : GET TransactionData End
+2020-06-22 09:58:53----------Data 1 : Process Start
+2020-06-22 09:58:53----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:58:53----------Data 2 : GET TransactionData Start
+2020-06-22 09:58:53----------Data 2 : GET TransactionData End
+2020-06-22 09:58:53----------Data 2 : Process Start
+2020-06-22 09:58:53----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:58:53----------Data 3 : GET TransactionData Start
+2020-06-22 09:58:53----------Data 3 : GET TransactionData End
+2020-06-22 09:58:53----------Data 3 : Process Start
+2020-06-22 09:58:53----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:58:53----------Data 4 : GET TransactionData Start
+2020-06-22 09:58:53----------Data 4 : GET TransactionData End
+2020-06-22 09:58:53----------Data 4 : Process Start
+2020-06-22 09:58:53----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:58:53----------Data 5 : GET TransactionData Start
+2020-06-22 09:58:53----------Data 5 : GET TransactionData End
+2020-06-22 09:58:53----------Data 5 : Process Start
+2020-06-22 09:58:53----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 09:58:53----------Data 6 : GET TransactionData Start
+2020-06-22 09:58:53----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 09:58:56----------No Data Flow Fail(Exception) ----------
+2020-06-22 09:58:56----------No data Flow ErrorMessage : Cannot find the UI element corresponding to this selector: <wnd app='notepad.exe' cls='Notepad' title='2020-06-22 - 메모장' /><wnd aaname='가로' cls='Edit' /><ctrl name='텍스트 편집' role='editable text' /> | ErrorSource : Cannot find the UI element corresponding to this selector: <wnd app='notepad.exe' cls='Notepad' title='2020-06-22 - 메모장' /><wnd aaname='가로' cls='Edit' /><ctrl name='텍스트 편집' role='editable text' />
+2020-06-22 09:58:57----------Process Close Error
+2020-06-22 09:58:57----------ScreenshotFilePath : Exceptions_Screenshots\ExceptionScreenshot_200622.095857.png
+2020-06-22 09:58:57----------Process Kill
+<PROJECT START>
+2020-06-22 10:00:31----------Process Kill
+2020-06-22 10:00:31----------Init Start
+2020-06-22 10:00:31----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:00:31----------Data 1 : GET TransactionData Start
+2020-06-22 10:00:32----------Data 1 : GET TransactionData End
+2020-06-22 10:00:32----------Data 1 : Process Start
+2020-06-22 10:00:33----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:00:33----------Data 2 : GET TransactionData Start
+2020-06-22 10:00:33----------Data 2 : GET TransactionData End
+2020-06-22 10:00:33----------Data 2 : Process Start
+2020-06-22 10:00:33----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:00:33----------Data 3 : GET TransactionData Start
+2020-06-22 10:00:33----------Data 3 : GET TransactionData End
+2020-06-22 10:00:33----------Data 3 : Process Start
+2020-06-22 10:00:33----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:00:33----------Data 4 : GET TransactionData Start
+2020-06-22 10:00:33----------Data 4 : GET TransactionData End
+2020-06-22 10:00:33----------Data 4 : Process Start
+2020-06-22 10:00:33----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:00:33----------Data 5 : GET TransactionData Start
+2020-06-22 10:00:33----------Data 5 : GET TransactionData End
+2020-06-22 10:00:33----------Data 5 : Process Start
+2020-06-22 10:00:33----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:00:33----------Data 6 : GET TransactionData Start
+2020-06-22 10:00:33----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 10:00:36----------No Data Flow Fail(Exception) ----------
+2020-06-22 10:00:36----------No data Flow ErrorMessage : Cannot find the UI element corresponding to this selector: <wnd app='notepad.exe' cls='Notepad' title='2020-06-22 - 메모장' /><wnd aaname='가로' cls='Edit' /><ctrl name='텍스트 편집' role='editable text' /> | ErrorSource : 
+2020-06-22 10:00:37----------Process Close Error
+2020-06-22 10:00:37----------ScreenshotFilePath : Exceptions_Screenshots\ExceptionScreenshot_200622.100036.png
+2020-06-22 10:00:37----------Process Kill
+<PROJECT START>
+2020-06-22 10:04:49----------Process Kill
+2020-06-22 10:04:49----------Init Start
+2020-06-22 10:04:49----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:04:49----------Data 1 : GET TransactionData Start
+2020-06-22 10:04:50----------Data 1 : GET TransactionData End
+2020-06-22 10:04:50----------Data 1 : Process Start
+2020-06-22 10:04:50----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:04:50----------Data 2 : GET TransactionData Start
+2020-06-22 10:04:50----------Data 2 : GET TransactionData End
+2020-06-22 10:04:50----------Data 2 : Process Start
+2020-06-22 10:04:50----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:04:50----------Data 3 : GET TransactionData Start
+2020-06-22 10:04:50----------Data 3 : GET TransactionData End
+2020-06-22 10:04:50----------Data 3 : Process Start
+2020-06-22 10:04:50----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:04:50----------Data 4 : GET TransactionData Start
+2020-06-22 10:04:50----------Data 4 : GET TransactionData End
+2020-06-22 10:04:50----------Data 4 : Process Start
+2020-06-22 10:04:51----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:04:51----------Data 5 : GET TransactionData Start
+2020-06-22 10:04:51----------Data 5 : GET TransactionData End
+2020-06-22 10:04:51----------Data 5 : Process Start
+2020-06-22 10:04:51----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:04:51----------Data 6 : GET TransactionData Start
+2020-06-22 10:04:51----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 10:04:54----------No Data Flow Fail(Exception) ----------
+2020-06-22 10:04:54----------No data Flow ErrorMessage : Cannot find the UI element corresponding to this selector: <wnd app='notepad.exe' cls='Notepad' title='2020-06-22 - 메모장' /><wnd aaname='가로' cls='Edit' /><ctrl name='텍스트 편집' role='editable text' /> | ErrorSource : 
+2020-06-22 10:04:54----------Process Close Error
+2020-06-22 10:04:54----------ScreenshotFilePath : Exceptions_Screenshots\ExceptionScreenshot_200622.100454.png
+2020-06-22 10:04:54----------Process Kill
+<PROJECT START>
+2020-06-22 10:05:55----------Process Kill
+2020-06-22 10:05:55----------Init Start
+2020-06-22 10:05:55----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:05:55----------Data 1 : GET TransactionData Start
+2020-06-22 10:05:56----------Data 1 : GET TransactionData End
+2020-06-22 10:05:56----------Data 1 : Process Start
+2020-06-22 10:05:56----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:05:57----------Data 2 : GET TransactionData Start
+2020-06-22 10:05:57----------Data 2 : GET TransactionData End
+2020-06-22 10:05:57----------Data 2 : Process Start
+2020-06-22 10:05:57----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:05:57----------Data 3 : GET TransactionData Start
+2020-06-22 10:05:57----------Data 3 : GET TransactionData End
+2020-06-22 10:05:57----------Data 3 : Process Start
+2020-06-22 10:05:57----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:05:57----------Data 4 : GET TransactionData Start
+2020-06-22 10:05:57----------Data 4 : GET TransactionData End
+2020-06-22 10:05:57----------Data 4 : Process Start
+2020-06-22 10:05:57----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:05:57----------Data 5 : GET TransactionData Start
+2020-06-22 10:05:57----------Data 5 : GET TransactionData End
+2020-06-22 10:05:57----------Data 5 : Process Start
+2020-06-22 10:05:57----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:05:57----------Data 6 : GET TransactionData Start
+2020-06-22 10:05:57----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 10:06:00----------No Data Flow Fail(Exception) ----------
+2020-06-22 10:06:00----------No data Flow ErrorMessage : Cannot find the UI element corresponding to this selector: <wnd app='notepad.exe' cls='Notepad' title='2020-06-22 - 메모장' /><wnd aaname='가로' cls='Edit' /><ctrl name='텍스트 편집' role='editable text' /> | ErrorSource : System.Runtime.InteropServices.COMException (0x80040212): Cannot find the UI element corresponding to this selector: <wnd app='notepad.exe' cls='Notepad' title='2020-06-22 - 메모장' /><wnd aaname='가로' cls='Edit' /><ctrl name='텍스트 편집' role='editable text' />
+   at UiPath.UiNodeClass.FindFirst(UiFindScope scope, String nodeID)
+   at UiPath.Core.UiElement.FindFirst(FindScope scope, Selector selector, IPlaceholderResolver placeholderResolver)
+2020-06-22 10:06:00----------Process Close Error
+2020-06-22 10:06:00----------ScreenshotFilePath : Exceptions_Screenshots\ExceptionScreenshot_200622.100600.png
+2020-06-22 10:06:00----------Process Kill
+<PROJECT START>
+2020-06-22 10:12:20----------Process Kill
+2020-06-22 10:12:20----------Init Start
+2020-06-22 10:12:20----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:12:20----------Data 1 : GET TransactionData Start
+2020-06-22 10:12:21----------Data 1 : GET TransactionData End
+2020-06-22 10:12:21----------Data 1 : Process Start
+2020-06-22 10:12:21----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:12:21----------Data 2 : GET TransactionData Start
+2020-06-22 10:12:21----------Data 2 : GET TransactionData End
+2020-06-22 10:12:21----------Data 2 : Process Start
+2020-06-22 10:12:21----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:12:21----------Data 3 : GET TransactionData Start
+2020-06-22 10:12:21----------Data 3 : GET TransactionData End
+2020-06-22 10:12:21----------Data 3 : Process Start
+2020-06-22 10:12:21----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:12:21----------Data 4 : GET TransactionData Start
+2020-06-22 10:12:21----------Data 4 : GET TransactionData End
+2020-06-22 10:12:21----------Data 4 : Process Start
+2020-06-22 10:12:21----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:12:21----------Data 5 : GET TransactionData Start
+2020-06-22 10:12:21----------Data 5 : GET TransactionData End
+2020-06-22 10:12:21----------Data 5 : Process Start
+2020-06-22 10:12:22----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:12:22----------Data 6 : GET TransactionData Start
+2020-06-22 10:12:22----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 10:12:25----------No Data Flow Fail(Exception) ----------
+2020-06-22 10:12:25----------No data Flow ErrorMessage : Cannot find the UI element corresponding to this selector: <wnd app='notepad.exe' cls='Notepad' title='2020-06-22 - 메모장' /><wnd aaname='가로' cls='Edit' /><ctrl name='텍스트 편집' role='editable text' /> | ErrorSource :    at UiPath.Core.Activities.TaskAsyncCodeActivity`1.EndExecute(AsyncCodeActivityContext context, IAsyncResult result)
+   at System.Activities.AsyncCodeActivity.System.Activities.IAsyncCodeActivity.FinishExecution(AsyncCodeActivityContext context, IAsyncResult result)
+   at System.Activities.AsyncCodeActivity.CompleteAsyncCodeActivityData.CompleteAsyncCodeActivityWorkItem.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+2020-06-22 10:12:25----------Process Close Error
+2020-06-22 10:12:25----------ScreenshotFilePath : Exceptions_Screenshots\ExceptionScreenshot_200622.101225.png
+2020-06-22 10:12:25----------Process Kill
+<PROJECT START>
+2020-06-22 10:24:20----------Process Kill
+2020-06-22 10:24:20----------Init Start
+2020-06-22 10:24:20----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:24:21----------Data 1 : GET TransactionData Start
+2020-06-22 10:24:22----------Data 1 : GET TransactionData End
+2020-06-22 10:24:22----------Data 1 : Process Start
+2020-06-22 10:24:22----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:24:22----------Data 2 : GET TransactionData Start
+2020-06-22 10:24:22----------Data 2 : GET TransactionData End
+2020-06-22 10:24:22----------Data 2 : Process Start
+2020-06-22 10:24:22----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:24:22----------Data 3 : GET TransactionData Start
+2020-06-22 10:24:22----------Data 3 : GET TransactionData End
+2020-06-22 10:24:22----------Data 3 : Process Start
+2020-06-22 10:24:22----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:24:22----------Data 4 : GET TransactionData Start
+2020-06-22 10:24:22----------Data 4 : GET TransactionData End
+2020-06-22 10:24:22----------Data 4 : Process Start
+2020-06-22 10:24:22----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:24:22----------Data 5 : GET TransactionData Start
+2020-06-22 10:24:22----------Data 5 : GET TransactionData End
+2020-06-22 10:24:22----------Data 5 : Process Start
+2020-06-22 10:24:22----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:24:22----------Data 6 : GET TransactionData Start
+2020-06-22 10:24:22----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 10:24:23----------Process Close
+<PROJECT End>
+<PROJECT START>
+2020-06-22 10:25:04----------Process Kill
+2020-06-22 10:25:04----------Init Start
+2020-06-22 10:25:04----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:25:04----------Data 1 : GET TransactionData Start
+2020-06-22 10:25:05----------Data 1 : GET TransactionData End
+2020-06-22 10:25:05----------Data 1 : Process Start
+2020-06-22 10:25:05----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:25:05----------Data 2 : GET TransactionData Start
+2020-06-22 10:25:06----------Data 2 : GET TransactionData End
+2020-06-22 10:25:06----------Data 2 : Process Start
+2020-06-22 10:25:06----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:25:06----------Data 3 : GET TransactionData Start
+2020-06-22 10:25:06----------Data 3 : GET TransactionData End
+2020-06-22 10:25:06----------Data 3 : Process Start
+2020-06-22 10:25:06----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:25:06----------Data 4 : GET TransactionData Start
+2020-06-22 10:25:06----------Data 4 : GET TransactionData End
+2020-06-22 10:25:06----------Data 4 : Process Start
+2020-06-22 10:25:06----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:25:06----------Data 5 : GET TransactionData Start
+2020-06-22 10:25:06----------Data 5 : GET TransactionData End
+2020-06-22 10:25:06----------Data 5 : Process Start
+2020-06-22 10:25:06----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:25:06----------Data 6 : GET TransactionData Start
+2020-06-22 10:25:06----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 10:25:06----------No Data Flow Fail(Exception) ----------
+2020-06-22 10:25:06----------No data Flow ErrorMessage : Excel File C:\Users\cheon\Desktop\한국인프라 신용카드 현황2.xlsx was not found. | ErrorSource :    at UiPath.Excel.WorkbookApplication.Initialize(WorkbookArguments args, Boolean onlyIfWorkbookExists)
+   at UiPath.Excel.WorkbookApplication.Initialize(Application excelApp, WorkbookArguments args, Boolean onlyIfWorkbookExists)
+   at UiPath.Excel.Activities.ExcelApplicationScope.<>c.<.ctor>b__48_0(WorkbookArguments args)
+   at UiPath.Excel.Activities.ExcelApplicationScope.Execute(NativeActivityContext context)
+   at System.Activities.NativeActivity.InternalExecute(ActivityInstance instance, ActivityExecutor executor, BookmarkManager bookmarkManager)
+   at System.Activities.ActivityInstance.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+   at System.Activities.Runtime.ActivityExecutor.ExecuteActivityWorkItem.ExecuteBody(ActivityExecutor executor, BookmarkManager bookmarkManager, Location resultLocation)
+2020-06-22 10:25:06----------Process Close Error
+2020-06-22 10:25:06----------ScreenshotFilePath : Exceptions_Screenshots\ExceptionScreenshot_200622.102506.png
+2020-06-22 10:25:06----------Process Kill
+<PROJECT START>
+2020-06-22 10:25:42----------Process Kill
+2020-06-22 10:25:42----------Init Start
+2020-06-22 10:25:42----------Init END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:25:42----------Data 1 : GET TransactionData Start
+2020-06-22 10:25:43----------Data 1 : GET TransactionData End
+2020-06-22 10:25:43----------Data 1 : Process Start
+2020-06-22 10:25:43----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:25:44----------Data 2 : GET TransactionData Start
+2020-06-22 10:25:44----------Data 2 : GET TransactionData End
+2020-06-22 10:25:44----------Data 2 : Process Start
+2020-06-22 10:25:44----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:25:44----------Data 3 : GET TransactionData Start
+2020-06-22 10:25:44----------Data 3 : GET TransactionData End
+2020-06-22 10:25:44----------Data 3 : Process Start
+2020-06-22 10:25:44----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:25:44----------Data 4 : GET TransactionData Start
+2020-06-22 10:25:44----------Data 4 : GET TransactionData End
+2020-06-22 10:25:44----------Data 4 : Process Start
+2020-06-22 10:25:44----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:25:44----------Data 5 : GET TransactionData Start
+2020-06-22 10:25:44----------Data 5 : GET TransactionData End
+2020-06-22 10:25:44----------Data 5 : Process Start
+2020-06-22 10:25:44----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2020-06-22 10:25:44----------Data 6 : GET TransactionData Start
+2020-06-22 10:25:44----------Data 6 : GET TransactionData No more Data... END
+2020-06-22 10:25:44----------No Data Flow Fail(Exception) ----------
+2020-06-22 10:25:44----------No data Flow ErrorMessage : Excel File C:\Users\cheon\Desktop\한국인프라 신용카드 현황2.xlsx was not found. | ErrorSource : UiPath.Excel
+2020-06-22 10:25:44----------Process Close Error
+2020-06-22 10:25:44----------ScreenshotFilePath : Exceptions_Screenshots\ExceptionScreenshot_200622.102544.png
+2020-06-22 10:25:44----------Process Kill

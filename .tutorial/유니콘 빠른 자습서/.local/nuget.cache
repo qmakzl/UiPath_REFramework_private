@@ -1,0 +1,65 @@
+{
+  "version": 2,
+  "dgSpecHash": "h6P3zcmDyjlBFnPynBzykYjNNCSityhhY5Myb311NNOsPJGI2+RJLPcuGaEsjyeTZ7f8USq/ByNGum9GovsbnQ==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\infra\\Documents\\UiPath\\.tutorial\\유니콘 빠른 자습서\\.local\\",
+  "expectedPackageFiles": [
+    "C:\\Users\\infra\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.6\\microsoft.aspnetcore.http.features.3.1.6.nupkg.sha512",
+    "C:\\Users\\infra\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.6\\microsoft.extensions.configuration.3.1.6.nupkg.sha512",
+    "C:\\Users\\infra\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.6\\microsoft.extensions.configuration.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\infra\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\infra\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\infra\\.nuget\\packages\\system.io.pipelines\\4.7.1\\system.io.pipelines.4.7.1.nupkg.sha512",
+    "C:\\Users\\infra\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\infra\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\infra\\.nuget\\packages\\system.text.encodings.web\\4.7.1\\system.text.encodings.web.4.7.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU3037",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\infra\\Documents\\UiPath\\.tutorial\\유니콘 빠른 자습서\\.local",
+      "message": "Package 'System.Threading.Tasks.Extensions 4.5.2' from source 'https://www.myget.org/F/workflow/': The author primary signature validity period has expired.",
+      "libraryId": "System.Threading.Tasks.Extensions"
+    },
+    {
+      "code": "NU3037",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\infra\\Documents\\UiPath\\.tutorial\\유니콘 빠른 자습서\\.local",
+      "message": "Package 'Microsoft.Extensions.Configuration.Abstractions 3.1.6' from source 'C:\\Users\\infra\\AppData\\Local\\UiPath\\app-21.4.3\\Packages': The author primary signature validity period has expired.",
+      "libraryId": "Microsoft.Extensions.Configuration.Abstractions"
+    },
+    {
+      "code": "NU3037",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\infra\\Documents\\UiPath\\.tutorial\\유니콘 빠른 자습서\\.local",
+      "message": "Package 'Microsoft.Extensions.Configuration 3.1.6' from source 'C:\\Users\\infra\\AppData\\Local\\UiPath\\app-21.4.3\\Packages': The author primary signature validity period has expired.",
+      "libraryId": "Microsoft.Extensions.Configuration"
+    },
+    {
+      "code": "NU3037",
+      "level": "Warning",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\infra\\Documents\\UiPath\\.tutorial\\유니콘 빠른 자습서\\.local",
+      "message": "Package 'System.Numerics.Vectors 4.5.0' from source 'C:\\Users\\infra\\AppData\\Local\\UiPath\\app-21.4.3\\Packages': The author primary signature validity period has expired.",
+      "libraryId": "System.Numerics.Vectors"
+    },
+    {
+      "code": "NU3028",
+      "level": "Error",
+      "filePath": "C:\\Users\\infra\\Documents\\UiPath\\.tutorial\\유니콘 빠른 자습서\\.local",
+      "message": "Package 'System.Buffers 4.4.0' from source 'https://api.nuget.org/v3/index.json': The repository primary signature's timestamp found a chain building issue: UntrustedRoot: 인증서 체인은 처리되었지만, 신뢰 공급자에 의해 신뢰되지 않는 루트 인증서에서 중지되었습니다.",
+      "libraryId": "System.Buffers"
+    },
+    {
+      "code": "NU3037",
+      "level": "Error",
+      "filePath": "C:\\Users\\infra\\Documents\\UiPath\\.tutorial\\유니콘 빠른 자습서\\.local",
+      "message": "Package 'System.Buffers 4.4.0' from source 'https://api.nuget.org/v3/index.json': The repository primary signature validity period has expired.",
+      "libraryId": "System.Buffers"
+    }
+  ]
+}

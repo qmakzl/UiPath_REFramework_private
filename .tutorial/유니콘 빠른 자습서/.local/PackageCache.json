@@ -1,0 +1,222 @@
+{
+  "Packages": [
+    {
+      "Package": {
+        "Id": "UiPath.System.Activities",
+        "Version": "[21.4.0]"
+      },
+      "Assemblies": [
+        "C:\\Users\\infra\\.nuget\\packages\\microsoft.aspnetcore.http.features/3.1.6\\lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "C:\\Users\\infra\\.nuget\\packages\\microsoft.extensions.configuration/3.1.6\\lib/netstandard2.0/Microsoft.Extensions.Configuration.dll",
+        "C:\\Users\\infra\\.nuget\\packages\\microsoft.extensions.configuration.abstractions/3.1.6\\lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "C:\\Users\\infra\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\infra\\.nuget\\packages\\system.buffers/4.5.1\\lib/net461/System.Buffers.dll",
+        "C:\\Users\\infra\\.nuget\\packages\\system.io.pipelines/4.7.1\\lib/netstandard2.0/System.IO.Pipelines.dll",
+        "C:\\Users\\infra\\.nuget\\packages\\system.memory/4.5.4\\lib/net461/System.Memory.dll",
+        "C:\\Users\\infra\\.nuget\\packages\\system.numerics.vectors/4.5.0\\lib/net46/System.Numerics.Vectors.dll",
+        "C:\\Users\\infra\\.nuget\\packages\\system.text.encodings.web/4.7.1\\lib/net461/System.Text.Encodings.Web.dll"
+      ],
+      "Path": null
+    },
+    {
+      "Package": {
+        "Id": "UiPath.UIAutomation.Activities",
+        "Version": "[21.4.3]"
+      },
+      "Assemblies": [
+        "C:\\Users\\infra\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll"
+      ],
+      "Path": null
+    }
+  ],
+  "Conflicts": [],
+  "ResolvedDependencies": {
+    "Microsoft.AspNetCore.Http.Features": {
+      "Id": "Microsoft.AspNetCore.Http.Features",
+      "Version": "3.1.6",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.Extensions.Primitives",
+          "Item2": "[3.1.6, )"
+        },
+        {
+          "Item1": "System.IO.Pipelines",
+          "Item2": "[4.7.1, )"
+        }
+      ]
+    },
+    "Microsoft.Extensions.Configuration": {
+      "Id": "Microsoft.Extensions.Configuration",
+      "Version": "3.1.6",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.Extensions.Configuration.Abstractions",
+          "Item2": "[3.1.6, )"
+        }
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Abstractions": {
+      "Id": "Microsoft.Extensions.Configuration.Abstractions",
+      "Version": "3.1.6",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.Extensions.Primitives",
+          "Item2": "[3.1.6, )"
+        }
+      ]
+    },
+    "Newtonsoft.Json": {
+      "Id": "Newtonsoft.Json",
+      "Version": "11.0.2",
+      "Dependencies": []
+    },
+    "System.Buffers": {
+      "Id": "System.Buffers",
+      "Version": "4.5.1",
+      "Dependencies": []
+    },
+    "System.IO.Pipelines": {
+      "Id": "System.IO.Pipelines",
+      "Version": "4.7.1",
+      "Dependencies": [
+        {
+          "Item1": "System.Buffers",
+          "Item2": "[4.5.0, )"
+        },
+        {
+          "Item1": "System.Memory",
+          "Item2": "[4.5.3, )"
+        },
+        {
+          "Item1": "System.Threading.Tasks.Extensions",
+          "Item2": "[4.5.2, )"
+        }
+      ]
+    },
+    "System.Memory": {
+      "Id": "System.Memory",
+      "Version": "4.5.4",
+      "Dependencies": [
+        {
+          "Item1": "System.Buffers",
+          "Item2": "[4.5.1, )"
+        },
+        {
+          "Item1": "System.Numerics.Vectors",
+          "Item2": "[4.5.0, )"
+        },
+        {
+          "Item1": "System.Runtime.CompilerServices.Unsafe",
+          "Item2": "[4.5.3, )"
+        }
+      ]
+    },
+    "System.Numerics.Vectors": {
+      "Id": "System.Numerics.Vectors",
+      "Version": "4.5.0",
+      "Dependencies": []
+    },
+    "System.Text.Encodings.Web": {
+      "Id": "System.Text.Encodings.Web",
+      "Version": "4.7.1",
+      "Dependencies": [
+        {
+          "Item1": "System.Memory",
+          "Item2": "[4.5.4, )"
+        }
+      ]
+    }
+  },
+  "AllPackages": [
+    {
+      "Package": {
+        "Id": "Microsoft.AspNetCore.Http.Features",
+        "Version": "3.1.6"
+      },
+      "Assemblies": [
+        "C:\\Users\\infra\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.6\\lib\\netstandard2.0\\Microsoft.AspNetCore.Http.Features.dll"
+      ],
+      "Path": "C:\\Users\\infra\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.6"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.Extensions.Configuration",
+        "Version": "3.1.6"
+      },
+      "Assemblies": [
+        "C:\\Users\\infra\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.6\\lib\\netstandard2.0\\Microsoft.Extensions.Configuration.dll"
+      ],
+      "Path": "C:\\Users\\infra\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.6"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.Extensions.Configuration.Abstractions",
+        "Version": "3.1.6"
+      },
+      "Assemblies": [
+        "C:\\Users\\infra\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.6\\lib\\netstandard2.0\\Microsoft.Extensions.Configuration.Abstractions.dll"
+      ],
+      "Path": "C:\\Users\\infra\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.6"
+    },
+    {
+      "Package": {
+        "Id": "Newtonsoft.Json",
+        "Version": "11.0.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\infra\\.nuget\\packages\\newtonsoft.json\\11.0.2\\lib\\net45\\Newtonsoft.Json.dll"
+      ],
+      "Path": "C:\\Users\\infra\\.nuget\\packages\\newtonsoft.json\\11.0.2"
+    },
+    {
+      "Package": {
+        "Id": "System.Buffers",
+        "Version": "4.5.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\infra\\.nuget\\packages\\system.buffers\\4.5.1\\lib\\net461\\System.Buffers.dll"
+      ],
+      "Path": "C:\\Users\\infra\\.nuget\\packages\\system.buffers\\4.5.1"
+    },
+    {
+      "Package": {
+        "Id": "System.IO.Pipelines",
+        "Version": "4.7.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\infra\\.nuget\\packages\\system.io.pipelines\\4.7.1\\lib\\netstandard2.0\\System.IO.Pipelines.dll"
+      ],
+      "Path": "C:\\Users\\infra\\.nuget\\packages\\system.io.pipelines\\4.7.1"
+    },
+    {
+      "Package": {
+        "Id": "System.Memory",
+        "Version": "4.5.4"
+      },
+      "Assemblies": [
+        "C:\\Users\\infra\\.nuget\\packages\\system.memory\\4.5.4\\lib\\net461\\System.Memory.dll"
+      ],
+      "Path": "C:\\Users\\infra\\.nuget\\packages\\system.memory\\4.5.4"
+    },
+    {
+      "Package": {
+        "Id": "System.Numerics.Vectors",
+        "Version": "4.5.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\infra\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\lib\\net46\\System.Numerics.Vectors.dll"
+      ],
+      "Path": "C:\\Users\\infra\\.nuget\\packages\\system.numerics.vectors\\4.5.0"
+    },
+    {
+      "Package": {
+        "Id": "System.Text.Encodings.Web",
+        "Version": "4.7.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\infra\\.nuget\\packages\\system.text.encodings.web\\4.7.1\\lib\\net461\\System.Text.Encodings.Web.dll"
+      ],
+      "Path": "C:\\Users\\infra\\.nuget\\packages\\system.text.encodings.web\\4.7.1"
+    }
+  ]
+}

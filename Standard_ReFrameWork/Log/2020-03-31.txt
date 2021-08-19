@@ -1,0 +1,6 @@
+<PROJECT START>
+2020-03-31 11:29:58----------Process Kill
+2020-03-31 11:29:58----------Init Start
+<PROJECT START>
+2020-03-31 11:31:37----------Process Kill
+2020-03-31 11:31:37----------Init Start

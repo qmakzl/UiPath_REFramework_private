@@ -1,0 +1,42 @@
+﻿<PROJECT START>
+2021-02-09 17:13:57----------Process Kill
+2021-02-09 17:13:57----------Init Start
+2021-02-09 17:13:57----------Init END
+---------------------------------------------------------------------------------------------
+2021-02-09 17:13:57----------Data 1 : GET TransactionData Start
+2021-02-09 17:14:00----------Data 1 : GET TransactionData End
+2021-02-09 17:14:00----------Data 1 : Process Start
+2021-02-09 17:14:00----------Data 1 : Process END
+---------------------------------------------------------------------------------------------
+2021-02-09 17:14:00----------Data 2 : GET TransactionData Start
+2021-02-09 17:14:00----------Data 2 : GET TransactionData End
+2021-02-09 17:14:00----------Data 2 : Process Start
+2021-02-09 17:14:00----------Data 2 : Process END
+---------------------------------------------------------------------------------------------
+2021-02-09 17:14:00----------Data 3 : GET TransactionData Start
+2021-02-09 17:14:00----------Data 3 : GET TransactionData End
+2021-02-09 17:14:00----------Data 3 : Process Start
+2021-02-09 17:14:00----------Data 3 : Process END
+---------------------------------------------------------------------------------------------
+2021-02-09 17:14:00----------Data 4 : GET TransactionData Start
+2021-02-09 17:14:00----------Data 4 : GET TransactionData End
+2021-02-09 17:14:00----------Data 4 : Process Start
+2021-02-09 17:14:01----------Data 4 : Process END
+---------------------------------------------------------------------------------------------
+2021-02-09 17:14:01----------Data 5 : GET TransactionData Start
+2021-02-09 17:14:01----------Data 5 : GET TransactionData End
+2021-02-09 17:14:01----------Data 5 : Process Start
+2021-02-09 17:14:01----------Data 5 : Process END
+---------------------------------------------------------------------------------------------
+2021-02-09 17:14:01----------Data 6 : GET TransactionData Start
+2021-02-09 17:14:01----------Data 6 : GET TransactionData No more Data... END
+2021-02-09 17:14:01----------Process Close
+<PROJECT End>
+2021-02-09 17:21:22----------ScreenshotFilePath : Exceptions_Screenshots\ExceptionScreenshot_210209.052122.png
+2021-02-09 17:23:59----------ScreenshotFilePath : Exceptions_Screenshots\ExceptionScreenshot_210209.052359.png
+2021-02-09 17:23:59----------Process Kill
+2021-02-09 17:29:16----------Init ERROR
+2021-02-09 17:29:16----------ErrorMessage : Exception of type 'System.Exception' was thrown. | ErrorSource : System.Activities
+2021-02-09 17:29:16----------ScreenshotFilePath : Exceptions_Screenshots\ExceptionScreenshot_210209.052916.png
+2021-02-09 17:29:16----------Process Kill
+2021-02-09 17:29:16----------Process Close Error
