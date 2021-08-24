@@ -1,0 +1,123 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="938.4,1434.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.MLServices;assembly=UiPath.MLServices" xmlns:uma="clr-namespace:UiPath.MLServices.Activities;assembly=UiPath.MLServices.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>UiPath.MLServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="392,1369.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="inputStr" />
+      <Variable x:TypeArguments="sd:DataTable" Name="inputTable" />
+      <Variable x:TypeArguments="x:String" Name="output" />
+      <Variable x:TypeArguments="sd:DataTable" Name="predictionTable" />
+      <Variable x:TypeArguments="x:String" Name="predictionStr" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[inputTable]" Delimitator="Comma" DisplayName="Read CSV" FilePath="Input Data Churn.csv" sap:VirtualizedContainerService.HintSize="350.4,60" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+    <Assign sap:VirtualizedContainerService.HintSize="350.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[inputStr]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[JsonConvert.SerializeObject(inputTable)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="350.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[inputStr.ToString]" />
+    <uma:MLSkills ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Name="{x:Null}" NumberOfRetries="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" StatusCode="{x:Null}" TimeOutMs="{x:Null}" DisplayName="MLSkill" sap:VirtualizedContainerService.HintSize="350.4,351.2" sap2010:WorkflowViewState.IdRef="MLSkills_1" Item="[inputStr]" JsonResponse="[output]" NextPageNum="2" RefreshList="False" TotalCount="28">
+      <uma:MLSkills.MLSkillList>
+        <scg:List x:TypeArguments="um:MLSkill" Capacity="32">
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/englishtextclassification" Description="" Id="b71c7eeb-cbbe-4ec9-9811-97a5a4bbf1b0" InputDescription="Text to be classified as String: 'I loved this movie.'" InputType="JSON" Name="EnglishTextClassification" OutputDescription="JSON with pedicted class name, associated confidence on that class prediction (between 0-1).  For example: {'prediction': 'Positive', 'confidence': 0.9422031841278076,}" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/englishtextclassification-mlskill" Description="" Id="84bae117-6fec-43d1-b276-ab9303dee77d" InputDescription="Text to be classified as String: 'I loved this movie.'" InputType="JSON" Name="EnglishTextClassification_MLSkill" OutputDescription="JSON with pedicted class name, associated confidence on that class prediction (between 0-1).  For example: {'prediction': 'Positive', 'confidence': 0.9422031841278076,}" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/englishtextclassification-sg-skill" Description="EnglishTextClassification_sg_Skill" Id="28fa9075-da96-4bca-a817-e99f8eb6f05c" InputDescription="Text to be classified as String: 'I loved this movie.'" InputType="JSON" Name="EnglishTextClassification_sg_Skill" OutputDescription="JSON with pedicted class name, associated confidence on that class prediction (between 0-1).  For example: {'prediction': 'Positive', 'confidence': 0.9422031841278076,}" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/kjk-telcochurn" Description="telco churn practice" Id="08dd6969-20c6-4a46-a833-7d7927f0fcb7" InputDescription="telcochurn data" InputType="JSON" Name="kjk_telcochurn" OutputDescription="churn predict" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/koh-sa-mlskill" Description="" Id="7aad93c3-1586-4ea7-9860-ba41114451bb" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="koh_SA_MLSkill" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/kohtelcochurnskill" Description="This Skill predicts customer churn" Id="9cc1ae95-776a-4153-933f-7ed413f6ff84" InputDescription="json file - this is the input description you will see in Studio" InputType="JSON" Name="kohTelcoChurnSkill" OutputDescription=" json file - this is the output description you will see in Studio" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/ksw-ml-sentimentanalysis" Description="" Id="26be629f-1684-46df-a795-2378b3d0a110" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="KSW_ML_SentimentAnalysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/ksw-telcochurn-predict" Description="" Id="74ebab66-1ec2-4a39-80de-73aa6f7f2520" InputDescription="Telco Customer Info - Test" InputType="JSON" Name="KSW_TelcoChurn_Predict" OutputDescription="" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/mhjang-ml-sentimentanalysis" Description="" Id="bd9f5dfd-39f2-49e3-b56b-a1a91695b58a" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="mhjang_ML_SentimentAnalysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/objectdetection-sgbaek-skill" Description="" Id="8d416cfc-6f51-4afc-8a4f-99966f628eaa" InputDescription="Path to the image to be analyzed." InputType="FILE" Name="ObjectDetection_sgbaek_skill" OutputDescription="JSON with identified object’s class byte array representation (allows you to see box around objects), identified object’s class - name, score (between 0-1) Example: { 'Predicted ByteArray ': '/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgI…TD', 'Predicted Class': '[{'class': 'book', 'score': ' 0.31'}, {'class': 'dog', 'score': ' 0.53'}, {'class': 'chair', 'score': ' 0.79'}]' }" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/res-net-sgbaek-skill" Description="res_net" Id="d69a3131-53a0-4db6-8a92-fc7648c99466" InputDescription="image file" InputType="FILE" Name="res_net_sgbaek_skill" OutputDescription="json" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/senti-skill" Description="" Id="7439433f-6f5f-49cb-84f2-4389917a8da8" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="SENTI_SKILL" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/senti-skill-2" Description="" Id="6ded2356-74f3-4741-b10d-a27f141ebdc7" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="senti_SKill_2" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/sentimentanalysis" Description="SentimentAnalysis" Id="e35e8c2f-5ef7-48ed-bf4c-ba8b19d3e33a" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="SentimentAnalysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/sentimentanalysis-mlskill" Description="" Id="aa4ab0ce-4ec6-41cb-8549-70f3fde7e67f" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="SentimentAnalysis_MLSkill" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/sentimentanalysis-skill" Description="" Id="7850dddb-0859-4fe4-81bb-dc5ec1169fa2" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="SentimentAnalysis_skill" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/sgbaek-telcochurn-skill" Description="This skill predicts customers churn" Id="e3bfe5e3-7423-40e3-ad26-002394cc0b91" InputDescription="json file - this is the input description you will see in Studio" InputType="JSON" Name="sgbaek_TelcoChurn_skill" OutputDescription="json file - this is the output description you will see in Studio" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/shy-engtextclassifi" Description="shy_EngTextClassifi" Id="950cf459-c4f1-43e3-be1d-fa7da452c4c8" InputDescription="Text to be classified as String: 'I loved this movie.'" InputType="JSON" Name="shy_EngTextClassifi" OutputDescription="JSON with pedicted class name, associated confidence on that class prediction (between 0-1).  For example: {'prediction': 'Positive', 'confidence': 0.9422031841278076,}" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/shy-sentiment-analysis" Description="Sentiment_Analysis" Id="9d0dc1d4-a1b8-42f9-817a-f59e924a2921" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="Shy_Sentiment_Analysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/shyoo-telcochurn-skill" Description="write the description you would like to see in Studio" Id="c80c835e-f40d-4819-a2d9-acbc19362179" InputDescription="json file - this is the input description you will see in Studio" InputType="JSON" Name="shyoo_TelcoChurn_Skill" OutputDescription="json file - this is the output description you will see in Studio" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/telcochurn" Description="" Id="bb008846-7669-4b8b-b72f-06606e7301a8" InputDescription="" InputType="JSON" Name="TelcoChurn" OutputDescription="" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/telcochurn-skill" Description="" Id="933d61bb-0f7d-4e9f-a5ba-5f2044d8fa5a" InputDescription="" InputType="JSON" Name="TelcoChurn_skill" OutputDescription="" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/telcochurnskill" Description="" Id="f744e6dd-e15d-49f5-b6cc-0c61bcf4989f" InputDescription="" InputType="JSON" Name="TelcoChurnSkill" OutputDescription="" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/wj-telcochurn-mlskill" Description="" Id="65080e12-f4c8-4c95-b677-840e46ccea3b" InputDescription="" InputType="JSON" Name="WJ_TelcoChurn_MLSkill" OutputDescription="" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/wook-ml-skill" Description="스튜디오에서 보고 싶은 설명을 작성하세요." Id="b6f3113a-1368-40ce-8d98-c677dc00c2c2" InputDescription="json 파일 - Studio에서 볼 입력 설명입니다." InputType="JSON" Name="Wook_ML_SKiLL" OutputDescription=" json 파일 - Studio에서 볼 수 있는 출력 설명입니다." TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/yklee-customer" Description="ML_test" Id="dcca71a3-8397-4d36-86be-b3f9b2d4b54e" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="yklee_Customer" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/yklee-telco-churn" Description="yklee_Telco_Churn" Id="aa1cf50d-6573-4f47-824e-c5bc866cf21d" InputDescription="json file - this is the input description you will see in Studio" InputType="JSON" Name="yklee_Telco_Churn" OutputDescription="json file - this is the output description you will see in Studio" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+          <x:Reference>__ReferenceID0</x:Reference>
+        </scg:List>
+      </uma:MLSkills.MLSkillList>
+      <uma:MLSkills.SelectedMLSkill>
+        <um:MLSkill x:Name="__ReferenceID0" AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/yklee-telcochurnskill" Description="" Id="cd928bed-aa98-4825-b7b3-536aeb765863" InputDescription="train" InputType="JSON" Name="yklee_TelcoChurnSkill" OutputDescription="test" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+      </uma:MLSkills.SelectedMLSkill>
+    </uma:MLSkills>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="350.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[output.ToString]" />
+    <ui:DeserializeJson x:TypeArguments="sd:DataTable" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="350.4,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_3" JsonObject="[predictionTable]" JsonString="[output]" />
+    <ui:OutputDataTable DataTable="[predictionTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="350.4,22.4" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[predictionStr]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="350.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[predictionStr]" />
+    <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[predictionTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="ChurnResults.csv" sap:VirtualizedContainerService.HintSize="350.4,88" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" />
+    <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="ChurnResults.csv" sap:VirtualizedContainerService.HintSize="350.4,88" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
+  </Sequence>
+</Activity>

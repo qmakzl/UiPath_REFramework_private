@@ -1,0 +1,117 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="836.8,1171.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.MLServices;assembly=UiPath.MLServices" xmlns:uma="clr-namespace:UiPath.MLServices.Activities;assembly=UiPath.MLServices.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.MLServices</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Given an excel file that illustrates a conversation between a customer and an agent, display for each message the sentiment that is being transmitted and its confidence level" DisplayName="SentimentAnalysisExercise" sap:VirtualizedContainerService.HintSize="483.2,1106.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="conversationDT" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange AddHeaders="True" DataTable="[conversationDT]" DisplayName="Read Range Conversation" sap:VirtualizedContainerService.HintSize="441.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Conversation.xlsx">
+      <ui:ReadRange.Range>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:ReadRange.Range>
+    </ui:ReadRange>
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[conversationDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="441.6,825.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="392,676.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="messageResponse" />
+              <Variable x:TypeArguments="njl:JObject" Name="messageJSON" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uma:MLSkills ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Name="{x:Null}" NumberOfRetries="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" StatusCode="{x:Null}" TimeOutMs="{x:Null}" DisplayName="MLSkill" sap:VirtualizedContainerService.HintSize="350.4,351.2" sap2010:WorkflowViewState.IdRef="MLSkills_1" Item="[row(&quot;Message&quot;).ToString]" JsonResponse="[messageResponse]" NextPageNum="2" RefreshList="False" TotalCount="12">
+              <uma:MLSkills.MLSkillList>
+                <scg:List x:TypeArguments="um:MLSkill" Capacity="16">
+                  <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/koh-sa-mlskill" Description="" Id="7aad93c3-1586-4ea7-9860-ba41114451bb" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="koh_SA_MLSkill" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" ProjectId="5e38def3-9961-406c-8b5e-91602dc3cac0" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+                  <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/ksw-ml-sentimentanalysis" Description="" Id="26be629f-1684-46df-a795-2378b3d0a110" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="KSW_ML_SentimentAnalysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" ProjectId="73254698-61a3-40f6-88d3-6d4ae22cb7f9" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+                  <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/mhjang-ml-sentimentanalysis" Description="" Id="bd9f5dfd-39f2-49e3-b56b-a1a91695b58a" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="mhjang_ML_SentimentAnalysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" ProjectId="408e2d49-8542-4e2d-8a4d-f0a3c475e485" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+                  <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/senti-skill" Description="" Id="7439433f-6f5f-49cb-84f2-4389917a8da8" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="SENTI_SKILL" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" ProjectId="246a793f-b2b4-4195-8a90-3ae2c76300f8" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+                  <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/senti-skill-2" Description="" Id="6ded2356-74f3-4741-b10d-a27f141ebdc7" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="senti_SKill_2" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" ProjectId="ada0c903-fe5d-4e85-b540-3ba451179922" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+                  <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/sentimentanalysis" Description="SentimentAnalysis" Id="e35e8c2f-5ef7-48ed-bf4c-ba8b19d3e33a" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="SentimentAnalysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" ProjectId="a622d403-538b-477b-9146-6f7c5c019aa5" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+                  <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/sentimentanalysis-mlskill" Description="" Id="aa4ab0ce-4ec6-41cb-8549-70f3fde7e67f" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="SentimentAnalysis_MLSkill" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" ProjectId="a37fe060-bb4f-45f8-bcc1-7277a2801674" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+                  <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/sentimentanalysis-skill" Description="" Id="7850dddb-0859-4fe4-81bb-dc5ec1169fa2" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="SentimentAnalysis_skill" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" ProjectId="ca272bb9-2802-4793-8c54-91e5d33701d3" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+                  <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/shy-sentiment-analysis" Description="Sentiment_Analysis" Id="9d0dc1d4-a1b8-42f9-817a-f59e924a2921" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="Shy_Sentiment_Analysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" ProjectId="a64e94c8-ef8e-4542-95d9-2ffd01316d5d" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+                  <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/sim-mlskillsentiment" Description="" Id="24c3601c-82a1-43b8-a21c-e6a39d81be61" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="Sim_MLSkillSentiment" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" ProjectId="286d797f-3e17-4374-9301-117361cb0bb6" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+                  <x:Reference>__ReferenceID0</x:Reference>
+                  <um:MLSkill AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/young-mlskill-sentimentanalysis" Description="" Id="bc32e8be-59b8-4d33-a197-96b4483126b6" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="Young_MLSkill_SentimentAnalysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" ProjectId="c045ab5e-45a6-4bdc-9b38-3aa33114655a" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+                </scg:List>
+              </uma:MLSkills.MLSkillList>
+              <uma:MLSkills.SelectedMLSkill>
+                <um:MLSkill x:Name="__ReferenceID0" AccessUri="https://ai-uipath-jae.deskover.com/mlskills/bdb730cc-64a3-4cd0-863e-610c55bdd91b/cb76d5bc-17b8-429f-bb09-c53c212c9eb7/yklee-customer" Description="ML_test" Id="dcca71a3-8397-4d36-86be-b3f9b2d4b54e" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="yklee_Customer" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" ProjectId="cde0f5ee-e8c8-4e57-96ce-4ee9d9b078f0" TenantId="cb76d5bc-17b8-429f-bb09-c53c212c9eb7" />
+              </uma:MLSkills.SelectedMLSkill>
+            </uma:MLSkills>
+            <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON messageResponse" sap:VirtualizedContainerService.HintSize="350.4,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[messageJSON]" JsonString="[messageResponse]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="350.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[row(&quot;Message&quot;).ToString + &quot; - &quot;  + messageJSON(&quot;sentiment&quot;).ToString + &quot; - &quot; + messageJSON(&quot;confidence&quot;).ToString]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+  </Sequence>
+</Activity>
