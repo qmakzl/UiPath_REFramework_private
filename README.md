@@ -10,7 +10,7 @@ UiPath RPA 학습 시작 (개인 연습, 학습 공간)
 - BlockUserInput 사용 - 디버그 또는 실행중 마우스 움직임 제어
 - StateMachine - Init -> Get Transaction Data -> Process Transaction -> End Process
 
--------------------------
+-----------------------------------
 
 
 #### Init 
@@ -22,35 +22,35 @@ UiPath RPA 학습 시작 (개인 연습, 학습 공간)
 #### End Process
 - 프로세스 종료
 
-------------------------
+--------------------------------------
 
-Init 
+##### Init 
 Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
 - Start ->
 - Init Success -> Get Transaction Data
 - Init Error -> End Process
 - Error & Retry <- Process Transaction
-Get Transaction Data
+##### Get Transaction Data
 데이터 read 후 하나의 Data 만 발췌
 - Init Success <- Init
 - Get Success -> Process Transaction
 - Success <- Process Transaction
 - Rule Error <- Process Transaction
 - No Data -> End Process
-Process Transaction
+##### Process Transaction
 발췌 된 Data 1개 실행 프로세스
 - Get Success <- Get Transaction Data
 - Success -> Get Transaction Data
 - Rule Error -> Get Transaction Data
 - Error & Retry -> Init
 - Error & NoRetry -> End Process
-End Process
- 프로세스 종료
+##### End Process
+프로세스 종료
 - Init Error
 - No Data
 - Error & NoRetry
 
-
+---------------------------------------------
 
 #### Init 
 Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
