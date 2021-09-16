@@ -113,17 +113,16 @@ Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
 
 #### Process Transaction
 발췌 된 Data 1개 실행 프로세스
-    Try 안에 BusinessRuleException = Nothing
-        로그메세지
-       if 조건 SystemError Is Nothing
-       부합하면 Invoke workflow(Process)
-       Process = 작업하는 액티비티들
-       부합하지 않으면 Throw
-    Catches 안에 BusinessRuleException = exception, 
-                      Exception 에 SystemError = exception
-    Finally 안에 
-        Try Invoke workflow(SetTransactionStatus)
-        Catches exception 로그메세지
+- Try 안에 BusinessRuleException = Nothing, 로그메세지
+  - if 조건 SystemError Is Nothing
+  - 부합하면 Invoke workflow(Process)
+  - Process = 작업하는 액티비티들	
+  - 부합하지 않으면 Throw
+- Catches 안에 
+  - BusinessRuleException = exception, Exception 에 SystemError = exception
+- Finally 안에 
+  - Try Invoke workflow(SetTransactionStatus)
+  - Catches exception 로그메세지
 
   - Get Success <- Get Transaction Data
   - Success -> Get Transaction Data
