@@ -87,28 +87,28 @@ Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
 
 #### Get Transaction Data
 데이터 read 후 하나의 Data 만 발췌
-   Try 안에 시작 로그메세지 (DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")+"----------Data "+TransactionNumber.ToString+" : GET TransactionData Start")
-       if 조건 SystemError is Nothing
-       부합하면 Invoke workflow (GetTransactionData)
-       GetTransactionData = 최초 엑셀작업, 데이터테이블 핸들링, 엑셀 데이터 한줄씩 읽어오기
-       부합하지 않으면 Throw
-    Catch 안에 Exception
-       로그 메시지	
-       TransactionData = Nothing
+- Try 안에 시작 로그메세지 (DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")+"----------Data "+TransactionNumber.ToString+" : GET TransactionData Start")
+  - if 조건 SystemError is Nothing
+  - 부합하면 Invoke workflow (GetTransactionData)
+    - GetTransactionData = 최초 엑셀작업, 데이터테이블 핸들링, 엑셀 데이터 한줄씩 읽어오기
+    - 부합하지 않으면 Throw
+- Catch 안에 Exception
+  - 로그 메시지	
+  - TransactionData = Nothing
 
-	- Init Success <- Init
-	- Get Success -> Process Transaction
-	    조건 TransactionData IsNot Nothing
-	    try 로그메세지
-           catch SystemError = exception, 로그메세지
+    - Init Success <- Init
+    - Get Success -> Process Transaction
+      - 조건 TransactionData IsNot Nothing
+      - try 로그메세지
+      - catch SystemError = exception, 로그메세지
 
-	- Success <- Process Transaction
-	- Rule Error <- Process Transaction
-	- No Data -> End Process
-	    조건 TransactionData Is Nothing
-	    try 로그 메시지	
-	    catch SystemError = exception
-	    로그 메세지
+    - Success <- Process Transaction
+    - Rule Error <- Process Transaction
+    - No Data -> End Process
+      - 조건 TransactionData Is Nothing
+      - try 로그 메시지	
+      - catch SystemError = exception
+      - 로그 메세지
 	
 
 #### Process Transaction
