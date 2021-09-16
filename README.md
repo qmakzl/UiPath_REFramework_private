@@ -56,16 +56,16 @@ Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
 Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
 - Start ->
   - Try 안에 
-	        . if 조건 Config is Nothing  부합하면
-	        . Invoke workflow (InitAllSettings) - 엑셀 config 파일 dictionary 설정, for each <string> 이용해 엑셀 데이터 추출
-	        . AppendLine 프로젝트 시작 로그 작성
-	        . Invoke workflow (KillAllProcess) - 실행 및 디버그 전 불필요한 프로세스 닫기
+    - if 조건 Config is Nothing  부합하면
+    - Invoke workflow (InitAllSettings) - 엑셀 config 파일 dictionary 설정, for each <string> 이용해 엑셀 데이터 추출
+    - AppendLine 프로젝트 시작 로그 작성
+    - Invoke workflow (KillAllProcess) - 실행 및 디버그 전 불필요한 프로세스 닫기
+	
+    - If 조건 TransactionNumber=1 And RetryNumber=0 부합하지 않으면
+    - 재시작 로그메세지 
 	        
-	        . If 조건 TransactionNumber=1 And RetryNumber=0 부합하지 않으면
-	        . 재시작 로그메세지 
-	        
-	        . 시간 로그메세지
-	        . Invoke workflow (KillAllProcess) - 실행 및 디버그 전 불필요한 프로세스 닫기
+    - 시간 로그메세지
+    - Invoke workflow (KillAllProcess) - 실행 및 디버그 전 불필요한 프로세스 닫기
 	
 	    Catch 안에
 	        . SystemError exception
