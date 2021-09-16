@@ -54,7 +54,7 @@ Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
 
 ---------------------------------------------
 
-#### Init 
+## Init 
 Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
 - Start ->
   - Try 안에 
@@ -85,7 +85,7 @@ Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
         - 에러 로그 작성
 	
 
-#### Get Transaction Data
+## Get Transaction Data
 데이터 read 후 하나의 Data 만 발췌
 - Try 안에 시작 로그메세지 (DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")+"----------Data "+TransactionNumber.ToString+" : GET TransactionData Start")
   - if 조건 SystemError is Nothing
@@ -111,7 +111,7 @@ Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
       - 로그 메세지
 	
 
-#### Process Transaction
+## Process Transaction
 발췌 된 Data 1개 실행 프로세스
 - Try 안에 BusinessRuleException = Nothing, 로그메세지
   - if 조건 SystemError Is Nothing
@@ -141,7 +141,7 @@ Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
 	    에러 메세지
 	
 
-#### End Process
+## End Process
 프로세스 종료
 - Try 안에 if 조건 SystemError IsNot Nothing
 - 부합하면 Throw
