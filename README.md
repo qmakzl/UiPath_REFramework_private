@@ -19,29 +19,29 @@ Get Transaction Data
 Process Transaction
 발췌 된 Data 1개 실행 프로세스
 End Process
- 프로세스 종료
+프로세스 종료
 
 
 #### Init 
 Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
-	- Start ->
-	- Init Success -> Get Transaction Data
-	- Init Error -> End Process
-	- Error & Retry <- Process Transaction
+- Start ->
+- Init Success -> Get Transaction Data
+- Init Error -> End Process
+- Error & Retry <- Process Transaction
 Get Transaction Data
 데이터 read 후 하나의 Data 만 발췌
-	- Init Success <- Init
-	- Get Success -> Process Transaction
-	- Success <- Process Transaction
-	- Rule Error <- Process Transaction
-	- No Data -> End Process
+- Init Success <- Init
+- Get Success -> Process Transaction
+- Success <- Process Transaction
+- Rule Error <- Process Transaction
+- No Data -> End Process
 Process Transaction
 발췌 된 Data 1개 실행 프로세스
-	- Get Success <- Get Transaction Data
-	- Success -> Get Transaction Data
-	- Rule Error -> Get Transaction Data
-	- Error & Retry -> Init
-	- Error & NoRetry -> End Process
+- Get Success <- Get Transaction Data
+- Success -> Get Transaction Data
+- Rule Error -> Get Transaction Data
+- Error & Retry -> Init
+- Error & NoRetry -> End Process
 End Process
  프로세스 종료
 	- Init Error
