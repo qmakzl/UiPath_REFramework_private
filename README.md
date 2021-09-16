@@ -44,9 +44,9 @@ Process Transaction
 - Error & NoRetry -> End Process
 End Process
  프로세스 종료
-	- Init Error
-	- No Data
-	- Error & NoRetry
+- Init Error
+- No Data
+- Error & NoRetry
 
 
 
@@ -140,9 +140,9 @@ Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
 
 #### End Process
  프로세스 종료
-    Try 안에 if 조건 SystemError IsNot Nothing
-    부합하면 Throw
-    부합하지 않으면 성공적으로 처리하는(Invoke workflow ) 후(KillProcess 추가) 로그 메세지
+   Try 안에 if 조건 SystemError IsNot Nothing
+   부합하면 Throw
+   부합하지 않으면 성공적으로 처리하는(Invoke workflow ) 후(KillProcess 추가) 로그 메세지
 
 	- Init Error <- Init
 	- No Data <- Get Transaction Data
