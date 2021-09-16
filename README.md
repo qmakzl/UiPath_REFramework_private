@@ -7,8 +7,9 @@ UiPath RPA 학습 시작 (개인 연습, 학습 공간)
 ----------------------------------
  
 ### Main 
-BlockUserInput 사용 - 디버그 또는 실행중 마우스 움직임 제어
-StateMachine - Init -> Get Transaction Data -> Process Transaction -> End Process
+- BlockUserInput 사용 - 디버그 또는 실행중 마우스 움직임 제어
+- StateMachine - Init -> Get Transaction Data -> Process Transaction -> End Process
+
 -------------------------
 
 
