@@ -54,8 +54,8 @@ Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
 
 #### Init 
 Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
-	- Start ->
-	    Try 안에 
+- Start ->
+  - Try 안에 
 	        . if 조건 Config is Nothing  부합하면
 	        . Invoke workflow (InitAllSettings) - 엑셀 config 파일 dictionary 설정, for each <string> 이용해 엑셀 데이터 추출
 	        . AppendLine 프로젝트 시작 로그 작성
