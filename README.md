@@ -67,20 +67,20 @@ Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
     - 시간 로그메세지
     - Invoke workflow (KillAllProcess) - 실행 및 디버그 전 불필요한 프로세스 닫기
 	
-	    Catch 안에
-	        . SystemError exception
+      - Catch 안에
+        - SystemError exception
 	
-	- Init Success -> Get Transaction Data
-           조건 SystemError is Nothing
-           시간 로그 작성
+      - Init Success -> Get Transaction Data
+        - 조건 SystemError is Nothing
+        - 시간 로그 작성
 
-	- Init Error -> End Process
-	    조건 SystemError isNot Nothing
-	    에러 로그 작성 
+      - Init Error -> End Process
+        - 조건 SystemError isNot Nothing
+        - 에러 로그 작성 
 	 
-	- Error & Retry <- Process Transaction
-	    조건 에러 및 Retry 
-	    에러 로그 작성
+      - Error & Retry <- Process Transaction
+        - 조건 에러 및 Retry 
+        - 에러 로그 작성
 	
 
 #### Get Transaction Data
