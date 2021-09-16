@@ -145,6 +145,6 @@ Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
    부합하지 않으면 성공적으로 처리하는(Invoke workflow ) 후(KillProcess 추가) 로그 메세지
 
 	- Init Error <- Init
-	- No Data <- Get Transaction Data
+	- No Data <- Get Transaction Data 
 	- Error & NoRetry <- Process Transaction
 
