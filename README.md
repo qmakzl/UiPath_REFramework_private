@@ -33,7 +33,7 @@ Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
 - Init Error -> End Process
 - Error & Retry <- Process Transaction
 ##### Get Transaction Data
-데이터 read 후 하나의 Data 만 발췌
+데이터 read 후 하나의 Data 만 발췌 
 - Init Success <- Init
 - Get Success -> Process Transaction
 - Success <- Process Transaction
