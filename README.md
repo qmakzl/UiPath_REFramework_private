@@ -29,7 +29,7 @@ UiPath RPA 학습 시작 (개인 연습, 학습 공간)
 --------------------------------------
 
 ##### Init 
-Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅 
+Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅  
 - Start ->
 - Init Success -> Get Transaction Data
 - Init Error -> End Process 
