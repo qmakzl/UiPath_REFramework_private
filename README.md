@@ -23,7 +23,7 @@ UiPath RPA 학습 시작 (개인 연습, 학습 공간)
 - 데이터 read 후 하나의 Data 만 발췌
 #### Process Transaction 
 - 발췌 된 Data 1개 실행 프로세스
-#### End Process
+#### End Process 
 - 프로세스 종료 
 
 --------------------------------------
