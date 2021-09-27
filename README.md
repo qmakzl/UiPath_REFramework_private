@@ -13,7 +13,7 @@ UiPath RPA 학습 시작 (개인 연습, 학습 공간)
 - StateMachine - Init -> Get Transaction Data -> Process Transaction -> End Process  
  
 ![image](https://user-images.githubusercontent.com/53161059/133537592-21c712ee-05fe-4f9a-ae74-503b6c121663.png)
-
+ 
 -----------------------------------
 
 
