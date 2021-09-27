@@ -32,7 +32,7 @@ UiPath RPA 학습 시작 (개인 연습, 학습 공간)
 Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅   
 - Start ->
 - Init Success -> Get Transaction Data
-- Init Error -> End Process 
+- Init Error -> End Process  
 - Error & Retry <- Process Transaction
 ##### Get Transaction Data
 데이터 read 후 하나의 Data 만 발췌 
