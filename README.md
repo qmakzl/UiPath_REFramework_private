@@ -5,7 +5,7 @@ UiPath RPA 학습 시작 (개인 연습, 학습 공간)
     
 - [RPA](#RPA)       
 - [Abbyy Finereader]   
-- [Abbyy Flexicapture]
+- [Abbyy Flexicapture] 
        
 ----------------------------------  
     
