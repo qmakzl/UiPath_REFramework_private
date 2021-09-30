@@ -67,7 +67,7 @@ Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
     - Invoke workflow (KillAllProcess) - 실행 및 디버그 전 불필요한 프로세스 닫기
 	
     - If 조건 TransactionNumber=1 And RetryNumber=0 부합하지 않으면
-    - 재시작 로그메세지 
+    - 재시작 로그메세지  
 	        
     - 시간 로그메세지
     - Invoke workflow (KillAllProcess) - 실행 및 디버그 전 불필요한 프로세스 닫기
