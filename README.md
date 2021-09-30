@@ -41,7 +41,7 @@ Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅
 - Get Success -> Process Transaction
 - Success <- Process Transaction
 - Rule Error <- Process Transaction
-- No Data -> End Process
+- No Data -> End Process 
 ##### Process Transaction
 발췌 된 Data 1개 실행 프로세스
 - Get Success <- Get Transaction Data
