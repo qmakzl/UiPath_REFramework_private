@@ -1,0 +1,147 @@
+<div align='center'>
+<table class="m_-4610193533710281573MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="800" style="width: 600.0pt; background: white">
+<tbody>
+<tr>
+<td width="100%" style="width: 100.0%; padding: 0in 0in 0in 0in">
+<div align="center">
+<table class="m_-4610193533710281573MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="740" style="width: 555.0pt">
+<tbody>
+<tr style="height: 22.5pt">
+<td width="50"
+style="width: 37.5pt; padding: 0in 0in 0in 0in; height: 22.5pt"></td>
+<td width="640"
+style="width: 480.0pt; padding: 0in 0in 0in 0in; height: 22.5pt"></td>
+<td width="50"
+style="width: 37.5pt; padding: 0in 0in 0in 0in; height: 22.5pt"></td>
+</tr>
+<tr>
+<td width="50" style="width: 37.5pt; padding: 0in 0in 0in 0in"></td>
+<td style="padding: 0in 0in 0in 0in">
+<p class="MsoNormal" align="center" style="text-align: center">
+<span style="font-size: 9.0pt; font-family: &amp; quot; Malgun Gothic&amp;quot; ,&amp; quot; sans-serif &amp;quot;; color: black">
+<br> <br>
+</span><u></u><u></u>
+</p>
+</td>
+<td width="50" style="width: 37.5pt; padding: 0in 0in 0in 0in"></td>
+</tr>
+<tr style="height: 52.5pt">
+<td width="50" style="width: 37.5pt; padding: 0in 0in 0in 0in; height: 52.5pt"></td>
+<td style="padding: 0in 0in 0in 0in; height: 52.5pt">
+<p class="MsoNormal" style="line-height: 21.0pt">
+<b><span style="font-size: 16.5pt; font-family: &amp; quot; YouandiModern TextBold&amp;quot; ,&amp; quot; serif &amp;quot;; color: #404040; letter-spacing: -.75pt">
+{Notification Type}<br>
+</span></b><u></u><u></u>
+</p>
+</td>
+<td width="50" style="width: 37.5pt; padding: 0in 0in 0in 0in; height: 52.5pt"></td>
+</tr>
+<tr style="height: 52.5pt">
+<td width="50"
+style="width: 37.5pt; padding: 0in 0in 0in 0in; height: 52.5pt"></td>
+<td style="padding: 0in 0in 0in 0in; height: 52.5pt">
+<p class="MsoNormal" style="line-height: 12.0pt">
+<span style="font-size:10.0pt;font-family:&quot;Malgun Gothic&quot;,&quot;sans-serif&quot;;color:black">{Content} <br>
+</span><u></u><u></u>
+</p>
+</td>
+<td width="50" style="width: 37.5pt; padding: 0in 0in 0in 0in; height: 52.5pt"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="MsoNormal" align="center" style="text-align: center">
+&nbsp;<u></u><u></u>
+</p>
+<div align="center">
+<table class="m_-4610193533710281573MsoNormalTable" border="0" cellpadding="0">
+<tbody>
+<tr style="height: 9.0pt">
+<td colspan="2" style="padding: 0in 0in 0in 0in; height: 9.0pt">
+<div class="MsoNormal" align="center" style="text-align: center">
+<hr size="2" width="100%" align="center">
+</div>
+</td>
+</tr>
+<tr style="height: 35.0pt">
+<td width="150" valign="bottom" style="width: 112.5pt; padding: 0in 0in 0in 0in; height: 35.0pt">
+<p class="MsoNormal">
+<b><span style="font-size: 11.0pt; font-family: &amp; quot; Malgun Gothic&amp;quot; ,&amp; quot; sans-serif &amp;quot;; color: black">
+Process Name
+</span></b><br><u></u><u></u>
+</p>
+</td>
+<td width="570" valign="bottom" style="width: 427.5pt; padding: 0in 0in 0in 0in; height: 35.0pt">
+<p class="MsoNormal">
+<b><span style="font-size: 11.0pt; font-family: &amp; quot; Malgun Gothic&amp;quot; ,&amp; quot; sans-serif &amp;quot;; color: #606060">
+{Process Name}
+</span></b><br><u></u><u></u>
+</p>
+</td>
+</tr>
+<tr style="height: 10.0pt">
+<td colspan="2" style="padding: 0in 0in 0in 0in; height: 35.0pt">
+<div class="MsoNormal" align="center" style="text-align: center">
+<hr size="2" width="100%" align="center">
+</div>
+</td>
+</tr>
+<tr style="height: 10.0pt">
+<td width="150" valign="bottom" style="width: 112.5pt; padding: 0in 0in 0in 0in; height: 35.0pt">
+<p class="MsoNormal">
+<b><span style="font-size: 11.0pt; font-family: &amp; quot; Malgun Gothic&amp;quot; ,&amp; quot; sans-serif &amp;quot;; color: black">
+Robot Manager
+</span></b>
+<span> </span><u></u><u></u>
+</p>
+</td>
+<td width="570" valign="bottom" style="width: 427.5pt; padding: 0in 0in 0in 0in; height: 35.0pt">
+<p class="MsoNormal">
+<b><span style="font-size: 11.0pt; font-family: &amp; quot; Malgun Gothic&amp;quot; ,&amp; quot; sans-serif &amp;quot;; color: #606060">
+{Robot Manager}</span></b>
+<span> </span><u></u><u></u>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="MsoNormal" align="center" style="text-align: center">
+&nbsp;<u></u><u></u>
+</p>
+<div align="center">
+<table class="m_-4610193533710281573MsoNormalTable" border="0"
+cellpadding="0">
+<tbody>
+<tr>
+<td width="50" style="width: 37.5pt; padding: 0in 0in 0in 0in"></td>
+<td style="padding: 0in 0in 0in 0in">
+<p class="MsoNormal">
+<u></u><u></u>
+</p>
+</td>
+<td width="50" style="width: 37.5pt; padding: 0in 0in 0in 0in"></td>
+</tr>
+<tr style="height: 52.5pt">
+<td width="50" style="width: 37.5pt; padding: 0in 0in 0in 0in; height: 52.5pt"></td>
+<td style="padding: 0in 0in 0in 0in; height: 52.5pt">
+<p class="MsoNormal" style="line-height: 11.0pt">
+<span style="font-size: 10.0pt; font-family: &amp; quot; Dotum &amp;quot; ,&amp; quot; sans-serif &amp;quot;; color: #a3a3a3">
+This message is an automatic outgoing mail for RPA robots, so if you have any questions or comments, please contact the robot manger.
+</span><u></u><u></u>
+</p>
+<p class="MsoNormal" style="margin-bottom: 12.0pt; line-height: 20.0pt">
+<span style="font-size: 10.0pt; font-family: &amp; quot; Dotum &amp;quot; ,&amp; quot; sans-serif &amp;quot;; color: #a3a3a3"><br>
+<br> </span><u></u><u></u>
+</p>
+</td>
+<td width="50" style="width: 37.5pt; padding: 0in 0in 0in 0in; height: 52.5pt"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>

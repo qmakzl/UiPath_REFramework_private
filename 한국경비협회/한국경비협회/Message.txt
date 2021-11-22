@@ -1,0 +1,21 @@
+Sub Message()
+    Dim rngC As Range
+    Dim rngAll As Range
+    Dim endRow As Long
+  
+    Application.ScreenUpdating = False
+    endRow = Cells(Rows.Count, "A").End(3).Row
+    If endRow < 4 Then
+        endRow = 4
+    End If
+   
+    Set rngAll = Range([AG], Cells(endRow, "AG"))
+  
+    For Each rngC In rngAll
+        If InStr(rngC, Chr(10)) Then
+            rngC.Interior.ColorIndex = 6
+            rngC = Replace(rngC, Chr(10), "")
+        End If
+    Next rngC
+  
+End Sub
