@@ -1,0 +1,636 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SendMail" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_SystemError" Type="InArgument(s:Exception)" />
+    <x:Property Name="in_ScreenShotPath" Type="InArgument(x:String)" />
+    <x:Property Name="in_LogPath" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1208,4292</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SendMail_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="58">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>CredentialManagement</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Credentials.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="46">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SendMail" sap:VirtualizedContainerService.HintSize="953,4227" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="911,315" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="376,237" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:SendMail Bcc="{x:Null}" Body="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Cc="[in_Config(&quot;MailReference&quot;).ToString]" DisplayName="Send SMTP Mail Message" Email="rpa1@bseng.co.kr" EnableSSL="True" From="rpa1@bseng.co.kr" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Name="RPA1" Password="bseng12!@#" Port="25" SecureConnection="Auto" Server="mail1.bseng.co.kr" Subject="[&quot;[RPA] &quot;+in_Config(&quot;logF_BusinessProcessName&quot;).ToString+&quot;-에러발생(첨부확인)&quot;]" To="[in_Config(&quot;MailTo&quot;).ToString]">
+            <ui:SendMail.Files>
+              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                <InArgument x:TypeArguments="x:String">[in_ScreenShotPath]</InArgument>
+                <InArgument x:TypeArguments="x:String">[in_LogPath]</InArgument>
+              </scg:List>
+            </ui:SendMail.Files>
+          </ui:SendMail>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="911,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="731,1049" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="로그인" sap:VirtualizedContainerService.HintSize="689,957" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="http://ept.bseng.co.kr/gw/sub/common/login/cmmLogin.do">
+            <ui:OpenBrowser.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="655,856" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="ID" />
+                    <Variable x:TypeArguments="ss:SecureString" Name="PW" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="613,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                  <If Condition="[in_Config is Nothing]" sap:VirtualizedContainerService.HintSize="613,236" sap2010:WorkflowViewState.IdRef="If_4">
+                    <If.Then>
+                      <ui:GetSecureCredential CredentialType="Generic" DisplayName="Get secure credential" sap:VirtualizedContainerService.HintSize="284,79" sap2010:WorkflowViewState.IdRef="GetSecureCredential_2" Password="[PW]" PersistanceType="Enterprise" Target="벽산엔지니어링 그룹웨어" Username="[ID]" />
+                    </If.Then>
+                    <If.Else>
+                      <ui:GetSecureCredential CredentialType="Generic" DisplayName="Get secure credential" sap:VirtualizedContainerService.HintSize="284,79" sap2010:WorkflowViewState.IdRef="GetSecureCredential_1" Password="[PW]" PersistanceType="Enterprise" Target="[in_Config(&quot;Credentiacl&quot;).ToString]" Username="[ID]" />
+                    </If.Else>
+                  </If>
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  cmmLogin_userId'" sap:VirtualizedContainerService.HintSize="613,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[ID]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="18939358-250c-4ae9-bf34-5c638185b32e" InformativeScreenshot="f2eb4a58dcf7286f8c6257cd5b5aa942" Selector="&lt;webctrl id='cmmLogin_userId' tag='INPUT' type='text' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeInto.Target>
+                  </ui:TypeInto>
+                  <ui:TypeSecureText AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Secure Text 'INPUT  cmmLogin_pwd'" sap:VirtualizedContainerService.HintSize="613,106" sap2010:WorkflowViewState.IdRef="TypeSecureText_1" SecureText="[PW]" SimulateType="True">
+                    <ui:TypeSecureText.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d537416-6ba3-44f4-9440-592543cb4f69" InformativeScreenshot="5b5c14ac963d9c4d6e563a901c69b678" Selector="&lt;webctrl id='cmmLogin_pwd' tag='INPUT' type='password' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TypeSecureText.Target>
+                  </ui:TypeSecureText>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  cmmLogin_login'" sap:VirtualizedContainerService.HintSize="613,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fcb2d7fa-b8e1-41a5-91a6-aef1043ff05b" InformativeScreenshot="7921eea1273a82306c9d360e0369f7fa" Selector="&lt;webctrl id='cmmLogin_login' tag='INPUT' type='submit' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                </Sequence>
+              </ActivityAction>
+            </ui:OpenBrowser.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:OpenBrowser>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="911,236" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="242,158" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="메뉴 이동" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  javascript:void();'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9aabbecf-04ef-4aa5-a0e7-90b1f85066a6" InformativeScreenshot="2777f03080cad560c3652b341c64a7b6" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;&lt;webctrl aaname='메일' parentid='publish_lnb_MNU_C1234567890_EML' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  javascript:void();'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9aabbecf-04ef-4aa5-a0e7-90b1f85066a6" InformativeScreenshot="ba4f457613766010fb5dcebf73bdb503" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;&lt;webctrl name='iframe_MNU_C1234567890_EML' tag='IFRAME' /&gt;&lt;webctrl aaname='메일쓰기' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="911,3413" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="875,3335" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="메일 내용 입력" sap:VirtualizedContainerService.HintSize="833,3243" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Default="0" Name="fileIndex" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="보내는사람 클릭" sap:VirtualizedContainerService.HintSize="791,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e800be75-8fd2-42c7-96f0-a2041ef1d972" InformativeScreenshot="cfb9901e9bef35f062a1ce2ed030fc97" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;&lt;webctrl name='iframe_MNU_C1234567890_EML' tag='IFRAME' /&gt;&lt;webctrl idx='1' parentid='emlWrite_to' tag='UL' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <If Condition="[in_Config is Nothing]" sap:VirtualizedContainerService.HintSize="791,291" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="보내는사람 입력" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_12" SendWindowMessages="True" Text="procurement@bseng.co.kr[k(tab)]">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f415387-abc1-44d8-b3a2-0f6f3ef50372" InformativeScreenshot="cfb9901e9bef35f062a1ce2ed030fc97" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;&lt;webctrl name='iframe_MNU_C1234567890_EML' tag='IFRAME' /&gt;&lt;webctrl idx='1' parentid='emlWrite_to' tag='UL' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TypeInto.Target>
+                </ui:TypeInto>
+              </If.Then>
+              <If.Else>
+                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="보내는사람 입력" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="True" Text="[in_Config(&quot;MailTo&quot;).ToString+ &quot;[k(tab)]&quot;]">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f415387-abc1-44d8-b3a2-0f6f3ef50372" InformativeScreenshot="cfb9901e9bef35f062a1ce2ed030fc97" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;&lt;webctrl name='iframe_MNU_C1234567890_EML' tag='IFRAME' /&gt;&lt;webctrl idx='1' parentid='emlWrite_to' tag='UL' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TypeInto.Target>
+                </ui:TypeInto>
+              </If.Else>
+            </If>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="참조자 클릭" sap:VirtualizedContainerService.HintSize="791,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e800be75-8fd2-42c7-96f0-a2041ef1d972" InformativeScreenshot="bdd65b268f93ade8d75def89ac19c5c0" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;&lt;webctrl name='iframe_MNU_C1234567890_EML' tag='IFRAME' /&gt;&lt;webctrl idx='1' parentid='emlWrite_cc' tag='UL' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <If Condition="[in_Config is Nothing]" sap:VirtualizedContainerService.HintSize="791,292" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Then>
+                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="참조자 입력" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_13" SendWindowMessages="True" Text="wdy0705@bseng.co.kr[k(tab)]">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f415387-abc1-44d8-b3a2-0f6f3ef50372" InformativeScreenshot="bdd65b268f93ade8d75def89ac19c5c0" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;&lt;webctrl name='iframe_MNU_C1234567890_EML' tag='IFRAME' /&gt;&lt;webctrl idx='1' parentid='emlWrite_cc' tag='UL' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TypeInto.Target>
+                </ui:TypeInto>
+              </If.Then>
+              <If.Else>
+                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="참조자 입력" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_11" SendWindowMessages="True" Text="[in_Config(&quot;MailReference&quot;).ToString+ &quot;[k(tab)]&quot;]">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f415387-abc1-44d8-b3a2-0f6f3ef50372" InformativeScreenshot="bdd65b268f93ade8d75def89ac19c5c0" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;&lt;webctrl name='iframe_MNU_C1234567890_EML' tag='IFRAME' /&gt;&lt;webctrl idx='1' parentid='emlWrite_cc' tag='UL' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TypeInto.Target>
+                </ui:TypeInto>
+              </If.Else>
+            </If>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="제목 클릭" sap:VirtualizedContainerService.HintSize="791,106" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fa2167f1-1752-4f6e-9f08-6a02b2cd7641" InformativeScreenshot="2715c0a049f83adca9afa37fe62f5c75" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;&lt;webctrl name='iframe_MNU_C1234567890_EML' tag='IFRAME' /&gt;&lt;webctrl id='emlWrite_subject' tag='INPUT' type='text' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <If Condition="[in_Config is Nothing]" sap:VirtualizedContainerService.HintSize="791,292" sap2010:WorkflowViewState.IdRef="If_5">
+              <If.Then>
+                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="제목 입력" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_14" SimulateType="True" Text="[&quot;[RPA] &quot;+&quot;벤더 신용정보 관리 자동화 PDF&quot;+&quot;-에러발생(첨부확인)&quot;]">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="82b13ccc-9f7a-45ab-bb32-11a811ef7a57" InformativeScreenshot="28bd01d1d69574ff5af09f3e4a7c1e5e" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;&lt;webctrl name='iframe_MNU_C1234567890_EML' tag='IFRAME' /&gt;&lt;webctrl id='emlWrite_subject' tag='INPUT' type='text' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TypeInto.Target>
+                </ui:TypeInto>
+              </If.Then>
+              <If.Else>
+                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="제목 입력" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_7" SimulateType="True" Text="[&quot;[RPA] &quot;+in_Config(&quot;logF_BusinessProcessName&quot;).ToString+&quot;-에러발생(첨부확인)&quot;]">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="82b13ccc-9f7a-45ab-bb32-11a811ef7a57" InformativeScreenshot="28bd01d1d69574ff5af09f3e4a7c1e5e" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;&lt;webctrl name='iframe_MNU_C1234567890_EML' tag='IFRAME' /&gt;&lt;webctrl id='emlWrite_subject' tag='INPUT' type='text' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TypeInto.Target>
+                </ui:TypeInto>
+              </If.Else>
+            </If>
+            <ui:InterruptibleWhile DisplayName="첨부파일" sap:VirtualizedContainerService.HintSize="791,1280" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="755,1115" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe  벽산엔지니어링'" sap:VirtualizedContainerService.HintSize="713,154" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:ClickImage.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:ClickImage.CursorPosition>
+                    <ui:ClickImage.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAASCAYAAAAHWr00AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADtSURBVFhH7ZbtDYMgEEC7E7M4hq5C+OcYOolhjCbucHKVo5RacoLWz5cQuRwSXw6EB1yMW/js3MIx6rqGoihcw5iLVhU0Txs4NEilx56SJlqfWcIo6RPGMdKFzRghQHitanubs3TyIy/KBoIRjiTh8MkhT9jP9dCU77m0iguGHFDYKLcVyM50sLIzZBGW8C/RRYTdUuQKYzzO5cRnsL1wwh4myek54xxEeDq36wrjx/lVGiuVJ/zaw/Z9Ln8TniZT2LDKX5rE6OJBF449CCNfqyf3HCZRH188HY7wsrCEEZKmli+7DWzhs3AxYYABATf37j8o1CMAAAAASUVORK5CYII=" />
+                    </ui:ClickImage.Image>
+                    <ui:ClickImage.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="240de651-a35e-40b0-935e-6e93027133c9" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:ClickImage.Target>
+                  </ui:ClickImage>
+                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" DisplayName="Find Element 'Static'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1" WaitVisible="True">
+                    <ui:WaitUiElementAppear.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f68e2f58-c2d0-49a2-9016-1ae87aa894bf" InformativeScreenshot="b39d32283743b46b1e0a043abff06589" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='열기' /&gt;&lt;wnd ctrlid='1090' title='파일 이름(&amp;amp;N):' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:WaitUiElementAppear.Target>
+                  </ui:WaitUiElementAppear>
+                  <If Condition="[fileIndex=0]" sap:VirtualizedContainerService.HintSize="713,291" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="1000" DisplayName="Type Into 'Edit'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_8" Text="[in_ScreenShotPath]">
+                        <ui:TypeInto.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="78f91ae3-b310-4703-95c6-eac256840323" InformativeScreenshot="797fb90d392f801a37a5878013ff2142" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='열기' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:TypeInto.Target>
+                      </ui:TypeInto>
+                    </If.Then>
+                    <If.Else>
+                      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBefore="1000" DisplayName="Type Into 'Edit'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[in_LogPath]">
+                        <ui:TypeInto.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="78f91ae3-b310-4703-95c6-eac256840323" InformativeScreenshot="797fb90d392f801a37a5878013ff2142" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='열기' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:TypeInto.Target>
+                      </ui:TypeInto>
+                    </If.Else>
+                  </If>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="09c938ef-6f59-434e-9230-5e2044802a4f" InformativeScreenshot="4e53ac64f5b1cee3af72669af2da4741" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='열기' /&gt;&lt;wnd ctrlid='1' title='열기(&amp;amp;O)' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:WaitUiElementVanish WaitNotActive="{x:Null}" DisplayName="Wait Element Vanish 'Button'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="WaitUiElementVanish_1" WaitNotVisible="True">
+                    <ui:WaitUiElementVanish.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ad2cf1d-3f5a-4a73-a891-afffe7408b57" InformativeScreenshot="73e00d137798973983440062a7eae9df" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='열기' /&gt;&lt;wnd ctrlid='1' title='열기(&amp;amp;O)' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:WaitUiElementVanish.Target>
+                  </ui:WaitUiElementVanish>
+                  <Assign sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[fileIndex]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[fileIndex+1]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="fileIndex&lt;2" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+              </ui:InterruptibleWhile.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InterruptibleWhile>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="발송" sap:VirtualizedContainerService.HintSize="791,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="207a7c77-56c6-4460-9f9d-b2fe211d5261" InformativeScreenshot="618f0042b2ddb91079ba668b53b60224" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;&lt;webctrl name='iframe_MNU_C1234567890_EML' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='submit' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Find Image 'chrome.exe  벽산엔지니어링'" sap:VirtualizedContainerService.HintSize="791,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
+              <ui:WaitImageAppear.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+              </ui:WaitImageAppear.Image>
+              <ui:WaitImageAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fe0afe8a-34fb-415c-9b62-1774da4a0b73" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:WaitImageAppear.Target>
+            </ui:WaitImageAppear>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  javascript:void(0)'" sap:VirtualizedContainerService.HintSize="791,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="740fa180-1c7b-4e5d-9ff2-c465608c5f10" InformativeScreenshot="3cb5e287dd883385592ae95971dbc5c0" Selector="&lt;html app='chrome.exe' title='벽산엔지니어링' /&gt;&lt;webctrl name='iframe_MNU_C1234567890_EML' tag='IFRAME' /&gt;&lt;webctrl aaname='확인' parentid='publish_layerExplain' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

@@ -1,0 +1,24 @@
+Sub invokeMessage()
+Dim shtWork As String
+shtWork = "조달부 관리 VENDOR LIST"
+
+Dim rngAll As Range
+Dim rngTarget As Range
+Dim cellStr As String
+Dim targetCol As String
+Dim endRow As Integer
+
+targetCol = "AG"
+
+Sheets(shtWork).Activate
+endRow = ActiveSheet.Cells(ActiveSheet.Rows.Count, 2).End(xlUp).Row+1
+
+Set rngAll = Range(Cells(4, targetCol), Cells(endRow, targetCol))
+
+For Each rngTarget In rngAll
+	if InStr(rngTarget, Chr(10)) Then
+		cellStr = rngTarget.Value
+		rngTarget.Value = Replace(cellStr, Chr(10), "")
+	End if
+Next rngTarget
+End Sub
