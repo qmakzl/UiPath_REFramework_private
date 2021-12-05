@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ProcessTransaction" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ProcessTransaction" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_TransactionData" Type="InArgument(sd:DataRow)" />
@@ -130,51 +130,15 @@
   </sap:WorkflowViewStateService.ViewState>
   <Flowchart DisplayName="한국경비협회" sap:VirtualizedContainerService.HintSize="1282.4,1309.6" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="s:String[]" Name="Arr_PDF" />
-      <Variable x:TypeArguments="x:String" Default="나이스" Name="Text_appraiser" />
-      <Variable x:TypeArguments="x:String" Name="PDF_Business_Number" />
-      <Variable x:TypeArguments="x:Int32" Name="index_vender_business" />
-      <Variable x:TypeArguments="x:String" Name="PDF_founding_date" />
-      <Variable x:TypeArguments="x:String" Name="PDF_Settlement_date" />
-      <Variable x:TypeArguments="x:String" Name="PDF_cash_flow_rating" />
-      <Variable x:TypeArguments="x:String" Name="PDF_address" />
-      <Variable x:TypeArguments="x:String" Name="PDF_sales" />
-      <Variable x:TypeArguments="x:String" Name="PDF_operating_profit" />
-      <Variable x:TypeArguments="x:String" Name="PDF_Debt_Ratio" />
-      <Variable x:TypeArguments="x:String" Name="PDF_Net_Income" />
-      <Variable x:TypeArguments="x:String" Name="PDF_capital" />
-      <Variable x:TypeArguments="x:String" Name="PDF_opinion" />
-      <Variable x:TypeArguments="x:String" Name="PDF_Page" />
-      <Variable x:TypeArguments="x:String" Name="PDF_credit_rating" />
-      <Variable x:TypeArguments="sd:DataTable" Name="vender_list_first_1" />
-      <Variable x:TypeArguments="sd:DataTable" Name="vender_list_1" />
-      <Variable x:TypeArguments="x:Int32" Name="index_vender_business_1" />
-      <Variable x:TypeArguments="sd:DataTable" Name="vender_list_second_1" />
-      <Variable x:TypeArguments="sd:DataTable" Name="DT_update" />
-      <Variable x:TypeArguments="x:Int32" Name="index_vender" />
-      <Variable x:TypeArguments="sd:DataTable" Name="vender_list" />
-      <Variable x:TypeArguments="sd:DataTable" Name="DT_update_final" />
-      <Variable x:TypeArguments="x:Int32" Name="DT_DATE" />
-      <Variable x:TypeArguments="x:Boolean" Name="flag_Business_Number" />
-      <Variable x:TypeArguments="x:String" Name="quarterly" />
-      <Variable x:TypeArguments="sd:DataTable" Name="DT_TV" />
-      <Variable x:TypeArguments="sd:DataTable" Name="DT_VV" />
       <Variable x:TypeArguments="sd:DataTable" Name="ExtractDT" />
-      <Variable x:TypeArguments="sd:DataTable" Name="DTR_update" />
       <Variable x:TypeArguments="x:Boolean" Name="Check" />
       <Variable x:TypeArguments="sd:DataTable" Name="io_DT_list1" />
       <Variable x:TypeArguments="x:String" Name="ss" />
       <Variable x:TypeArguments="x:Int32" Name="index_9" />
-      <Variable x:TypeArguments="sd:DataTable" Name="DT_check" />
-      <Variable x:TypeArguments="x:Boolean" Name="check_update" />
       <Variable x:TypeArguments="x:Boolean" Name="dt_sss" />
       <Variable x:TypeArguments="x:Int32" Name="index_7" />
-      <Variable x:TypeArguments="sd:DataTable" Name="DT_updateexcel" />
       <Variable x:TypeArguments="x:String" Name="dt" />
       <Variable x:TypeArguments="sd:DataTable" Name="DT_G" />
-      <Variable x:TypeArguments="sd:DataTable" Name="tableEmail" />
-      <Variable x:TypeArguments="x:String" Name="email" />
-      <Variable x:TypeArguments="snm:MailMessage" Name="Gmail1" />
       <Variable x:TypeArguments="x:Int32" Name="index_1" />
       <Variable x:TypeArguments="sd:DataTable" Name="DT_email" />
     </Flowchart.Variables>
@@ -268,9 +232,6 @@
                     <If Condition="[Check=True]" sap:VirtualizedContainerService.HintSize="1172,969.6" sap2010:WorkflowViewState.IdRef="If_773">
                       <If.Then>
                         <Sequence sap:VirtualizedContainerService.HintSize="375.2,200" sap2010:WorkflowViewState.IdRef="Sequence_3210">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="x:String" Name="index" />
-                          </Sequence.Variables>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -692,10 +653,6 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Sequence sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_3267">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="email" />
-              <Variable x:TypeArguments="x:Boolean" Name="checkEmail" />
-            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -793,9 +750,6 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Sequence sap:VirtualizedContainerService.HintSize="476.8,1422.4" sap2010:WorkflowViewState.IdRef="Sequence_3284">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="email1" />
-                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1101,10 +1055,7 @@
               <av:Size x:Key="ShapeSize">200,68.8</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap:VirtualizedContainerService.HintSize="593.6,2481.6" sap2010:WorkflowViewState.IdRef="Sequence_3305">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:Boolean" Name="checkEmail" />
-            </Sequence.Variables>
+          <Sequence sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_3305">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1196,13 +1147,13 @@
             </ui:UiElementExists>
             <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="552,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_322">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="550.4,698.4" sap2010:WorkflowViewState.IdRef="Sequence_3312">
+                <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="280.8,174.4" sap2010:WorkflowViewState.IdRef="Sequence_3312">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="yklee@krinfra.co.kr" DisplayName="Use Gmail" EmailAddress="yklee@krinfra.co.kr" sap:VirtualizedContainerService.HintSize="238.4,81.6" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+                  <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="yklee@krinfra.co.kr" DisplayName="Use Gmail" EmailAddress="yklee@krinfra.co.kr" sap:VirtualizedContainerService.HintSize="239.2,81.6" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
                     <umab:GmailApplicationCard.Body>
                       <ActivityAction x:TypeArguments="um:IMailQuickHandle">
                         <ActivityAction.Argument>
