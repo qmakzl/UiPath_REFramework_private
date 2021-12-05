@@ -3,7 +3,7 @@ UiPath RPA 학습 시작 (개인 연습, 학습 공간)
  
 ### Categories  
      
-- [RPA](#RPA) 
+- [RPA](#RPA)  
 - [Abbyy Finereader]
 - [Abbyy Flexicapture] 
    
@@ -28,7 +28,7 @@ UiPath RPA 학습 시작 (개인 연습, 학습 공간)
 - 프로세스 종료
 
 --------------------------------------
-
+ 
 ##### Init 
 Config 파일 세팅, Kill 프로세스, 기본 프로그램 실행 세팅   
 - Start -> 
