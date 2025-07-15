@@ -2,8 +2,8 @@ UiPath RPA (개인 연습, 학습 공간)
 ----------------------------------
 
 ### Categories
-              
-- [RPA](#RPA)       
+               
+- [RPA](#RPA)
 - [Abbyy Finereader]
 - [Abbyy Flexicapture]
 
